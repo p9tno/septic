@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900&display=swap");
 /* Global variables */
 /* ======================================================================== */
 /* Grid */
@@ -10,17 +8,73 @@
 /* ======================================================================== */
 @import "../fonts/icon/style.css";
 @font-face {
-  font-family: "Roboto";
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../fonts/Inter/Inter-Thin.eot?") format("eot"), url("../fonts/Inter/Inter-Thin.woff2") format("woff2"), url("../fonts/Inter/Inter-Thin.woff") format("woff"), url("../fonts/Inter/Inter-Thin.ttf") format("truetype"), url('../fonts/Inter/Inter-Thin.svg#str-replace("Inter", " ", "_")') format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/Inter/Inter-ExtraLight.eot?") format("eot"), url("../fonts/Inter/Inter-ExtraLight.woff2") format("woff2"), url("../fonts/Inter/Inter-ExtraLight.woff") format("woff"), url("../fonts/Inter/Inter-ExtraLight.ttf") format("truetype"), url('../fonts/Inter/Inter-ExtraLight.svg#str-replace("Inter", " ", "_")') format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Inter/Inter-Light.eot?") format("eot"), url("../fonts/Inter/Inter-Light.woff2") format("woff2"), url("../fonts/Inter/Inter-Light.woff") format("woff"), url("../fonts/Inter/Inter-Light.ttf") format("truetype"), url('../fonts/Inter/Inter-Light.svg#str-replace("Inter", " ", "_")') format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Inter/Inter-Regular.eot?") format("eot"), url("../fonts/Inter/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter/Inter-Regular.woff") format("woff"), url("../fonts/Inter/Inter-Regular.ttf") format("truetype"), url('../fonts/Inter/Inter-Regular.svg#str-replace("Inter", " ", "_")') format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/Roboto/Roboto-Medium.eot?") format("eot"), url("../fonts/Roboto/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype"), url('../fonts/Roboto/Roboto-Medium.svg#str-replace("Roboto", " ", "_")') format("svg");
+  src: url("../fonts/Inter/Inter-Medium.eot?") format("eot"), url("../fonts/Inter/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter/Inter-Medium.woff") format("woff"), url("../fonts/Inter/Inter-Medium.ttf") format("truetype"), url('../fonts/Inter/Inter-Medium.svg#str-replace("Inter", " ", "_")') format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Inter/Inter-SemiBold.eot?") format("eot"), url("../fonts/Inter/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter/Inter-SemiBold.woff") format("woff"), url("../fonts/Inter/Inter-SemiBold.ttf") format("truetype"), url('../fonts/Inter/Inter-SemiBold.svg#str-replace("Inter", " ", "_")') format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Inter/Inter-Bold.eot?") format("eot"), url("../fonts/Inter/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter/Inter-Bold.woff") format("woff"), url("../fonts/Inter/Inter-Bold.ttf") format("truetype"), url('../fonts/Inter/Inter-Bold.svg#str-replace("Inter", " ", "_")') format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/Inter/Inter-ExtraBold.eot?") format("eot"), url("../fonts/Inter/Inter-ExtraBold.woff2") format("woff2"), url("../fonts/Inter/Inter-ExtraBold.woff") format("woff"), url("../fonts/Inter/Inter-ExtraBold.ttf") format("truetype"), url('../fonts/Inter/Inter-ExtraBold.svg#str-replace("Inter", " ", "_")') format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Inter/Inter-Black.eot?") format("eot"), url("../fonts/Inter/Inter-Black.woff2") format("woff2"), url("../fonts/Inter/Inter-Black.woff") format("woff"), url("../fonts/Inter/Inter-Black.ttf") format("truetype"), url('../fonts/Inter/Inter-Black.svg#str-replace("Inter", " ", "_")') format("svg");
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
-  font-weight: bold;
-  src: url("../fonts/Roboto/Roboto-Bold.eot?") format("eot"), url("../fonts/Roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype"), url('../fonts/Roboto/Roboto-Bold.svg#str-replace("Roboto", " ", "_")') format("svg");
+  font-weight: 100;
+  src: url("../fonts/Roboto/Roboto-Thin.eot?") format("eot"), url("../fonts/Roboto/Roboto-Thin.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Thin.woff") format("woff"), url("../fonts/Roboto/Roboto-Thin.ttf") format("truetype"), url('../fonts/Roboto/Roboto-Thin.svg#str-replace("Roboto", " ", "_")') format("svg");
   font-display: swap;
 }
 @font-face {
@@ -38,31 +92,24 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Roboto Slab";
-  font-style: normal;
-  font-weight: bold;
-  src: url("../fonts/Roboto_Slab/RobotoSlab-Bold.eot?") format("eot"), url("../fonts/Roboto_Slab/RobotoSlab-Bold.woff2") format("woff2"), url("../fonts/Roboto_Slab/RobotoSlab-Bold.woff") format("woff"), url("../fonts/Roboto_Slab/RobotoSlab-Bold.ttf") format("truetype"), url('../fonts/Roboto_Slab/RobotoSlab-Bold.svg#str-replace("Roboto Slab", " ", "_")') format("svg");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Roboto Slab";
-  font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/Roboto_Slab/RobotoSlab-Light.eot?") format("eot"), url("../fonts/Roboto_Slab/RobotoSlab-Light.woff2") format("woff2"), url("../fonts/Roboto_Slab/RobotoSlab-Light.woff") format("woff"), url("../fonts/Roboto_Slab/RobotoSlab-Light.ttf") format("truetype"), url('../fonts/Roboto_Slab/RobotoSlab-Light.svg#str-replace("Roboto Slab", " ", "_")') format("svg");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Roboto Slab";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/Roboto_Slab/RobotoSlab-Medium.eot?") format("eot"), url("../fonts/Roboto_Slab/RobotoSlab-Medium.woff2") format("woff2"), url("../fonts/Roboto_Slab/RobotoSlab-Medium.woff") format("woff"), url("../fonts/Roboto_Slab/RobotoSlab-Medium.ttf") format("truetype"), url('../fonts/Roboto_Slab/RobotoSlab-Medium.svg#str-replace("Roboto Slab", " ", "_")') format("svg");
+  src: url("../fonts/Roboto/Roboto-Medium.eot?") format("eot"), url("../fonts/Roboto/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype"), url('../fonts/Roboto/Roboto-Medium.svg#str-replace("Roboto", " ", "_")') format("svg");
   font-display: swap;
 }
 @font-face {
-  font-family: "Roboto Slab";
+  font-family: "Roboto";
   font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Roboto_Slab/RobotoSlab-Regular.eot?") format("eot"), url("../fonts/Roboto_Slab/RobotoSlab-Regular.woff2") format("woff2"), url("../fonts/Roboto_Slab/RobotoSlab-Regular.woff") format("woff"), url("../fonts/Roboto_Slab/RobotoSlab-Regular.ttf") format("truetype"), url('../fonts/Roboto_Slab/RobotoSlab-Regular.svg#str-replace("Roboto Slab", " ", "_")') format("svg");
+  font-weight: bold;
+  src: url("../fonts/Roboto/Roboto-Bold.eot?") format("eot"), url("../fonts/Roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype"), url('../fonts/Roboto/Roboto-Bold.svg#str-replace("Roboto", " ", "_")') format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Roboto/Roboto-Black.eot?") format("eot"), url("../fonts/Roboto/Roboto-Black.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Black.woff") format("woff"), url("../fonts/Roboto/Roboto-Black.ttf") format("truetype"), url('../fonts/Roboto/Roboto-Black.svg#str-replace("Roboto", " ", "_")') format("svg");
   font-display: swap;
 }
 * {
@@ -559,7 +606,7 @@ body {
   padding: 2em 0;
 }
 .section__title {
-  font-family: "Roboto Flex";
+  font-family: "Roboto";
   font-weight: 400;
 }
 
@@ -776,14 +823,6 @@ body {
     transform: rotate(-45deg);
   }
 }
-.stiky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-}
-
 @media (max-width: 767px) {
   .navbar {
     position: fixed;
@@ -839,7 +878,7 @@ body {
   }
 }
 .menu-item a {
-  font-family: "Roboto Flex";
+  font-family: "Roboto";
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
@@ -901,6 +940,26 @@ body {
   overflow: hidden;
 }
 
+.header__logo .logo svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.header__logo .logo svg rect:nth-child(2) {
+  animation: rotate 4.5s 1s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* Footer
  ----------------------------------------------------------------------------- */
 .footer {
@@ -1357,33 +1416,102 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 }
 
 .btn {
-  display: inline-block;
-  padding: 1em 2em;
-  border-radius: 1em;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375em;
+  padding: 0.766em 0.5em;
+  border-radius: 0.625em;
   border: none;
   outline: none;
   max-width: 100%;
+  min-width: 10.625em;
   font-family: "Inter";
   font-size: 1em;
-  font-weight: 400;
+  font-weight: 700;
   text-decoration: none;
   text-align: center;
-  color: #000;
-  background-color: #7b8287;
+  color: #ffffff;
   cursor: pointer;
-  transition: 0.3s;
 }
-.btn:hover {
-  background-color: #cbcbcb;
-  color: #000;
+@media (min-width: 768px) {
+  .btn {
+    padding: 1.138em 1em;
+    min-width: 11.875em;
+  }
 }
-.btn:active, .btn:focus {
-  background-color: #c4c4c4;
-  color: #000;
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(-14deg, #0349FC 22.51%, #5887FF 52.54%, #0349FC 80.92%);
 }
-.btn:disabled {
-  color: red;
+@media (min-width: 768px) {
+  .btn:before {
+    transition: 0.5s;
+  }
+}
+.btn i {
+  font-size: 1.25em;
+  position: relative;
+}
+.btn span {
+  font-size: 0.875em;
+  line-height: 1.4645;
+}
+@media (min-width: 768px) {
+  .btn span {
+    font-size: 1em;
+    line-height: 1.35;
+  }
+}
+@media (min-width: 768px) {
+  .btn:hover:before {
+    width: 170%;
+  }
+}
+@media (min-width: 768px) {
+  .btn:active:before {
+    width: 300%;
+  }
+}
+.btn.disabled, .btn:disabled {
   cursor: not-allowed;
+  background: #4f80fd;
+}
+.btn.disabled:before, .btn:disabled:before {
+  content: none;
+}
+.btn_success:before {
+  background: linear-gradient(-14deg, #51A708 16.56%, #9BC379 48.58%, #51A708 81.39%);
+}
+.btn_success.disabled, .btn_success:disabled {
+  background: #4c9d08;
+}
+.btn_lg {
+  min-width: 100%;
+}
+@media (min-width: 768px) {
+  .btn_lg {
+    min-width: 19.5em;
+  }
+}
+.btn_lg span {
+  font-size: 1em;
+  line-height: 1.2813;
+}
+@media (min-width: 768px) {
+  .btn_lg span {
+    font-size: 1.25em;
+    line-height: 1.08;
+  }
 }
 
 .collapse__title {

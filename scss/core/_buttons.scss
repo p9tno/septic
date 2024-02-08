@@ -1,67 +1,117 @@
 // Style for button and pseudo button for input and link
 
 .btn {
-	display: inline-block;
-	padding: 1em 2em;
-	border-radius: 1em;
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.375em;
+
+	padding: 0.766em 0.5em;
+	border-radius: 0.625em;
 	border: none;
 	outline: none;
 	max-width: 100%;
+	min-width: 10.625em;
 
 	font-family: $main_font_family;
 	font-size: 1em;
-	font-weight: 400;
+	font-weight: 700;
 	text-decoration: none;
 	text-align: center;
 
-	color: $main_color;
-	background-color: $color_primary;
-	
-	cursor: pointer;
-	transition: 0.3s;
+	color: $color_white;
 
-	// градиент
-	// position: relative;
-	// z-index: 10;
-	// overflow: hidden;
-	//
-	// &:before {
-	// 	content: '';
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	z-index: -1;
-	// 	transition: width 0.5s;
-	// 	background-image: linear-gradient(90deg, $color_seccondary 0%, #e8b7be 100%);
-	// }
-	//
-	// &:hover {
-	// 	background-color: #fff;
-	// 	color: $color_withe;
-	// 	text-decoration: none;
-	//
-	// 	&:before {
-	// 		width: 150%;
-	// 	}
-	// }
+	cursor: pointer;
+
+	@media (min-width: 768px) {
+		padding: 1.138em 1em;
+		min-width: 11.875em;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background: linear-gradient(-14deg, #0349FC 22.51%, #5887FF 52.54%, #0349FC 80.92%);
+
+		@media (min-width: 768px) {
+			transition: 0.5s;
+		}
+	}
+
+	i {
+		font-size: 1.25em;
+		position: relative;
+	}
+
+	span {
+		font-size: 0.875em;
+		line-height: 1.4645;
+		@media (min-width: 768px) {
+			font-size: 1em;
+			line-height: 1.35;
+		}
+	}
 
 	&:hover {
-		background-color: $btn_default_bg_color_hover;
-		color: $btn_default_text_color;
+		@media (min-width: 768px) {
+			&:before {
+				width: 170%;
+			}
+		}
 	}
 
-	&:active,
-	&:focus {
-		background-color: $btn_default_bg_color_active;
-		color: $btn_default_text_color;
+	&:active {
+		@media (min-width: 768px) {
+			&:before {
+				width: 300%;
+			}
+		}
 	}
 
+	&.disabled,
 	&:disabled {
-		color: red;
 		cursor: not-allowed;
-		// pointer-events: none;
+		background: lighten($color_info, 15%);
+
+		&:before {
+			content: none;
+		}
+	}
+
+	&_success {
+		&:before {
+			background: linear-gradient(-14deg, #51A708 16.56%, #9BC379 48.58%, #51A708 81.39%);
+		}
+
+		&.disabled,
+		&:disabled {
+			background: darken($color_success, 2%);
+		}
+	}
+
+	&_lg {
+		min-width: 100%;
+		@media (min-width: 768px) {
+			min-width: 19.5em;
+		}
+
+		span {
+			font-size: 1em;
+			line-height: 1.2813;
+			@media (min-width: 768px) {
+				font-size: 1.25em;
+				line-height: 1.08;
+			}
+		}
 	}
 
 }
