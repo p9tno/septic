@@ -4,21 +4,11 @@ body {
 	font-family: $main_font_family;
 	color: $main_color;
 	line-height: $main_line_height;
-	font-size: calc(.034 * 100vw + 0px);
-	// background-color: #101010;
+	font-size: calc(.05 * 100vw + 0px);
 
 	@media (min-width: 768px) {
-		font-size: calc(.00838 * 100vw + 0px);
+		font-size: calc(.01066667 * 100vw + 0px);
 	}
-
-	@media (min-width: 1200px) {
-		// font-size: calc(.00838 * 100vw + 0px);
-	}
-
-	// @media (min-width: 1600px) {
-	// 	font-size: $main_font_size;
-	// }
-
 }
 
 .wrapper {
@@ -38,7 +28,7 @@ body {
 
 .container_center {
 	max-width: $container_width;
-	padding: 0 1em;
+	padding: 0 0.3125em;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -70,12 +60,6 @@ body {
 
 .d-block {
 	display: block!important;
-}
-
-.bg {
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
 }
 
 .img {
@@ -151,16 +135,4 @@ body {
 
 	}
 }
-
-// По счетчикам элементов с нулям впереди на будущее 
-// li:before {
-//   counter-increment: li;
-//   content: counter(item, decimal-leading-zero);
-// }
-
-// При чем есть варинаты через :nth-child(-n+9) сделать
-
-// * {
-// 	border: 1px solid #000;
-// }
 

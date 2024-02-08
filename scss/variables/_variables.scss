@@ -1,22 +1,31 @@
 /* Global variables */
 /* ======================================================================== */
-$main_font_family: "Roboto";
-$second_font_family: "Roboto Slab";
+$main_font_family: "Inter";
+$second_font_family: "Roboto Flex";
 $main_color: #000;
 $main_line_height: 1.2;
 $main_font_size: 1em;
 
-$container_width: 80em;
+$container_width: 81.25em;
 
 $footer_height: auto;
 
 // Color collection for elements
 $color_primary: #7b8287;
-$color_success: #36a566;
-$color_info: #03a9f4;
 $color_warning: #fca33e;
-$color_danger: #ff1a1a;
+
+$color_info: #0349FC;
+$color_info_light: #1A79B7;
+$color_success: #51A708;
+$color_success_light: #EEFFE5;
+$color_danger: #D73434;
 $color_white: #ffffff;
+$color_black: #000000;
+
+// #51A708, #9BC379, #51A708
+
+
+// #0349FC, #618CFF, #0349FC
 
 /* Grid */
 /* ======================================================================== */

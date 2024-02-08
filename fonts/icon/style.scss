@@ -2,17 +2,17 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?emjvh7');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?emjvh7#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?emjvh7') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?emjvh7') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?emjvh7##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?thr872');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?thr872#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?thr872') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?thr872') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?thr872##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon_"], [class*=" icon_"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: '#{$icomoon-font-family}' !important;
   speak: never;
@@ -27,29 +27,54 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-home {
+.icon_question {
   &:before {
-    content: $icon-home; 
+    content: $icon_question; 
   }
 }
-.icon-clock2 {
+.icon_check {
   &:before {
-    content: $icon-clock2; 
+    content: $icon_check; 
   }
 }
-.icon-calendar {
+.icon_warning {
   &:before {
-    content: $icon-calendar; 
+    content: $icon_warning; 
   }
 }
-.icon-printer {
+.icon_whatsapp {
   &:before {
-    content: $icon-printer; 
+    content: $icon_whatsapp; 
   }
 }
-.icon-arrow-down {
+.icon_arrow_right {
   &:before {
-    content: $icon-arrow-down; 
+    content: $icon_arrow_right; 
+  }
+}
+.icon_arrow_left {
+  &:before {
+    content: $icon_arrow_left; 
+  }
+}
+.icon_burger {
+  &:before {
+    content: $icon_burger; 
+  }
+}
+.icon_caret {
+  &:before {
+    content: $icon_caret; 
+  }
+}
+.icon_phone {
+  &:before {
+    content: $icon_phone; 
+  }
+}
+.icon_close {
+  &:before {
+    content: $icon_close; 
   }
 }
 

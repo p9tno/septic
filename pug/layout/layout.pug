@@ -1,7 +1,5 @@
 block variable
     -var path = '';
-    //- -var page = true;
-    //- -var pageClass = 'bg';
 
 <!DOCTYPE html>
 html(lang="en")
@@ -12,11 +10,7 @@ html(lang="en")
         title Document
 
         link(rel="stylesheet", type="text/css", href=path +"css/aos.css")
-        link(rel="stylesheet", type="text/css", href=path +"css/fancybox.min.css")
-        link(rel="stylesheet", type="text/css", href=path +"css/jquery-ui.css")
         link(rel="stylesheet", type="text/css", href=path +"css/swiper-bundle.min.css")
-        link(rel="stylesheet", type="text/css", href=path +"css/twentytwenty.css")
-
         link(rel="stylesheet", type="text/css", href=path + "css/style.css")
     body
 
@@ -41,13 +35,6 @@ html(lang="en")
                 block content
 
             include footer.pug
-
-            //- begin toTop
-            .toTop
-                a(href="#wrapper") 
-                    i.icon_to_top
-
-            //- end to
 
             include modal.pug
 

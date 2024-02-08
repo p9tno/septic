@@ -6,10 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/aos.css"/>
-    <link rel="stylesheet" type="text/css" href="css/fancybox.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
     <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/twentytwenty.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
   </head>
   <body>
@@ -51,17 +48,15 @@
         </div>
       </header>
       <main class="main_content">
-        <!-- begin projectNaw-->
-        <section class="projectNaw section" id="projectNaw">
+        <!-- begin lorem-->
+        <section class="lorem section" id="lorem">
           <div class="container_center">
-            <h2 class="section__title"><span>Навигация по проекту</span></h2>
-            <ul style="font-size:1.25em;">
-              <li><a href="../pages/home/">Главная </a></li>
-              <li><a href="../pages/contacts/">Контакты </a></li>
-            </ul>
+            <h2 class="section__title">lorem<i class="icon_phone"></i></h2>
+            <div class="lorem__content"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore odit nulla sapiente deserunt architecto. Quod corrupti laboriosam earum officiis, quas vitae recusandae, eaque ipsa quam deserunt veniam incidunt. Culpa, sapiente!</p>
           </div>
         </section>
-        <!-- end projectNaw-->
+        <!-- end lorem-->
         <!-- begin projectBtn-->
         <section class="projectBtn section" id="projectBtn">
           <div class="container_center">
@@ -79,14 +74,120 @@
             </div>
           </div>
         </section>
-        <!-- end projectModal-->
+        <!-- end projectModal// begin form
+        -->
+        <section class="form section" id="form">
+          <div class="container_center">
+            <div class="form__content">
+              <h1 class="form__title">Подать заявку на лизинг</h1><i class="icon_close">   </i>
+              <form class="form form_grid" action="send.php">
+                <input type="hidden" name="subject" value="форма в футоре"/>
+                <input type="hidden" name="notspam" value=""/>
+                <div class="form__row">
+                  <input type="text" required="required" placeholder="Предмет лизинга*"/>
+                </div>
+                <div class="form__row">
+                  <input type="number" placeholder="ИНН"/>
+                </div>
+                <div class="form__row">
+                  <input type="number" placeholder="Стоимость"/>
+                </div>
+                <div class="form__row">
+                  <input type="text" placeholder="Контактное лицо"/>
+                </div>
+                <div class="form__row">
+                  <input type="number" placeholder="Колличество"/>
+                </div>
+                <div class="form__row">
+                  <input type="text" required="required" placeholder="Телефон*"/>
+                </div>
+                <div class="form__row">
+                  <input type="number" placeholder="Аванс"/>
+                </div>
+                <div class="form__label"></div>
+                <div class="form__row">
+                  <select class="select" data-placeholder="Выбор">
+                    <option value=""></option>
+                    <option value="Значение 1">Значение 1</option>
+                    <option value="Значение 2">Значение 2</option>
+                    <option value="Значение 3">Значение 3</option>
+                    <option value="Значение 4">Значение 4</option>
+                  </select>
+                </div>
+                <div class="form__row">
+                  <input type="email" placeholder="E-mail"/>
+                </div>
+                <div class="form__row">
+                  <input type="text" placeholder="Местонахождение"/>
+                </div>
+                <div class="form__row form__row_full">
+                  <textarea type="text" placeholder="Дополнительная информация"></textarea>
+                </div>
+                <div class="form__row form__row_full">
+                  <div class="form__grup">
+                    <label class="form__check">
+                      <input type="radio" name="test" checked="checked" value="test"/><span>radio 1</span>
+                    </label>
+                    <label class="form__check">
+                      <input type="radio" name="test" value="test_2"/><span>radio 2</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form__row"><span class="form__text">Поля, помеченные *, обязательны к заполнения</span></div>
+                <div class="form__row">
+                  <div class="button">
+                    <button class="btn" id="btn_didisabled_js" type="submit">Отправить</button>
+                  </div>
+                </div>
+                <div class="form__row form__row_full">
+                  <div class="form__privacy">
+                    <label class="form__check">
+                      <input id="check_checked" type="checkbox" checked="checked"/><span>Прочитал(-а) Пользовательское соглашение и соглашаюсь с <a href="#" target="_blank">политикой обработки персональных данных</a></span>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!-- end form-->
+        <!-- begin faq-->
+        <section class="faq section" id="faq">
+          <div class="container_center">
+            <h2 class="section__title">F.A.Q.</h2>
+            <div class="faq__content">
+              <div class="collapse" data-collapse-wrapper="">
+                <div class="collapse__title open" data-collapse=""> <span>Вопрос о школе</span></div>
+                <!-- Добавить класс open для открытого состояния-->
+                <div class="collapse__body open" data-collapse-body="">
+                  <p>Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.</p>
+                  <p>В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.</p>
+                </div>
+              </div>
+              <div class="collapse" data-collapse-wrapper="">
+                <div class="collapse__title" data-collapse=""><span>Структура рынка нейтрализует повторный контакт, не считаясь с затратами</span></div>
+                <div class="collapse__body" data-collapse-body="">
+                  <p>Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.</p>
+                  <p>В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.</p>
+                </div>
+              </div>
+              <div class="collapse" data-collapse-wrapper="">
+                <div class="collapse__title" data-collapse=""><span>Потребительский рынок упорядочивает рейтинг</span></div>
+                <div class="collapse__body" data-collapse-body="">
+                  <p>Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.</p>
+                  <p>В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end faq-->
       </main>
       <footer class="footer">
         <div class="footer__content">
           <p><script type="text/javascript">document.write(new Date().getFullYear());</script></p>
         </div>
       </footer>
-      <div class="toTop"><a href="#wrapper"> <i class="icon_to_top"></i></a></div>
       <!-- Begin Modal modalVideo-->
       <div class="modal fade modalVideo" id="modalVideo">
         <div class="modal-dialog">
@@ -108,19 +209,10 @@
       </div>
       <!-- End modal info-->
       <script src="js/jquery.js"></script>
-      <script src="js/jquery.maskedinput.min.js"></script>
       <script src="js/modal.js"></script>
       <script src="js/swiper-bundle.min.js"></script>
       <script src="js/slider.js"></script>
-      <script src="js/select2.min.js"></script>
-      <script src="js/jquery.event.move.js"></script>
-      <script src="js/jquery.twentytwenty.js"></script>
-      <script src="js/jquery.marquee.min.js"></script>
       <script src="js/aos.js"></script>
-      <script src="js/fancybox.min.js"></script>
-      <script src="js/jquery-ui.min.js"></script>
-      <script src="js/jquery-ui-touch-punch.js"></script>
-      <script src="js/form.js"></script>
       <script src="js/function.js"></script>
     </div>
   </body>

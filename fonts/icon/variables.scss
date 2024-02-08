@@ -1,9 +1,14 @@
-$icomoon-font-family: "icomoon" !default;
+$icomoon-font-family: "robiclab" !default;
 $icomoon-font-path: "fonts" !default;
 
-$icon-home: "\e900";
-$icon-clock2: "\e94f";
-$icon-calendar: "\e953";
-$icon-printer: "\e954";
-$icon-arrow-down: "\ea36";
+$icon_question: unquote('"\\e909"');
+$icon_check: unquote('"\\e900"');
+$icon_warning: unquote('"\\e901"');
+$icon_whatsapp: unquote('"\\e902"');
+$icon_arrow_right: unquote('"\\e903"');
+$icon_arrow_left: unquote('"\\e904"');
+$icon_burger: unquote('"\\e905"');
+$icon_caret: unquote('"\\e906"');
+$icon_phone: unquote('"\\e907"');
+$icon_close: unquote('"\\e908"');
 
