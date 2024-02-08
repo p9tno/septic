@@ -40,6 +40,8 @@
     width: 100%;
     height: 100%;
     background: $color_warning;
+    background-color: lighten($color_info, 0%);
+    // border-radius: 0.625em;
     transform: scale(0);
     transform-origin: center center;
     animation: preloader-4-anim 2s infinite linear;
@@ -49,20 +51,24 @@
 .preloader > div:nth-of-type(5),
 .preloader > div:nth-of-type(9) {
     animation-delay: 0.4s;
+    background-color: lighten($color_info, 15%);
 }
 
 .preloader > div:nth-of-type(4),
 .preloader > div:nth-of-type(8) {
     animation-delay: 0.2s;
+    background-color: lighten($color_info, 10%);
 }
 
 .preloader > div:nth-of-type(2),
 .preloader > div:nth-of-type(6) {
     animation-delay: 0.6s;
+    background-color: lighten($color_info, 20%);
 }
 
 .preloader > div:nth-of-type(3) {
     animation-delay: 0.8s;
+    background-color: lighten($color_info, 25%);
 }
 @keyframes preloader-4-anim {
     0% {
