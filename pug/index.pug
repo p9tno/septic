@@ -1,0 +1,44 @@
+extends layout/layout.pug
+
+block content
+    // begin projectNaw
+    section#projectNaw.projectNaw.section
+        .container_center
+            h2.section__title
+                span Навигация по проекту
+            ul(style="font-size:1.25em;")
+                li
+                    a(href="../pages/home/") Главная 
+                li
+                    a(href="../pages/contacts/") Контакты 
+
+    // end projectNaw
+
+
+    // begin projectBtn
+    section#projectBtn.projectBtn.section
+        .container_center
+            h2.section__title
+                span Кнопки
+            .section__content
+                a.btn(href="#") Кнопка
+                br
+                br
+                a.btn.btn_sm(href="#") Маленькая кнопка
+
+    // end projectBtn
+
+    // begin projectModal
+    section#projectModal.projectModal.section
+        .container_center
+            h2.section__title
+                span Модальные окна
+            .section__content
+                a.btn.show_modal_js(href="#info") Собщение
+                br
+                br
+                span.btn.youtubeModal_js#rsDoGqnPE4c Видео
+
+                .youtubeModal-js#rsDoGqnPE4c
+
+    // end projectModal

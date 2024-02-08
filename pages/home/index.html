@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/aos.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/fancybox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/twentytwenty.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+  </head>
+  <body>
+    <div class="preloader__wrap" id="preloader">
+      <div class="preloader"><div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+      </div>
+    </div>
+    <div class="wrapper" id="wrapper">
+      <header class="header">
+        <div class="header__content">
+          <div class="header__logo"><a class="logo" href="/"><img src="/img/logo.png" alt="alt"/></a></div>
+          <div class="header__toggle"></div>
+          <div class="header__nav">
+            <nav class="navbar" id="navbar">
+              <ul class="menu">
+                <li class="menu-item current-menu-item"><a href="#">Новости</a></li>
+                <li class="menu-item"><a href="#">Объявления</a></li>
+                <li class="menu-item"><a href="#">F.A.Q.</a></li>
+                <li class="menu-item"><a href="#">Контакты</a></li>
+                <li class="menu-item menu-item-has-children"><a href="#">Важное</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
+                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
+                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
+                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="main_content">
+        <!-- begin form-->
+        <section class="form section" id="form">
+          <div class="container_center">
+            <div class="form__content">
+              <h1 class="form__title">Подать заявку на лизинг</h1><i class="icon_close">   </i>
+              <form class="form form_grid" action="send.php">
+                <input type="hidden" name="subject" value="форма в футоре"/>
+                <input type="hidden" name="notspam" value=""/>
+                <div class="form__row">
+                  <input type="text" required="required" placeholder="Предмет лизинга*"/>
+                </div>
+                <div class="form__row">
+                  <input type="number" placeholder="ИНН"/>
+                </div>
+                <div class="form__row">
+                  <input type="number" placeholder="Стоимость"/>
+                </div>
+                <div class="form__row">
+                  <input type="text" placeholder="Контактное лицо"/>
+                </div>
+                <div class="form__row">
+                  <input type="number" placeholder="Колличество"/>
+                </div>
+                <div class="form__row">
+                  <input type="text" required="required" placeholder="Телефон*"/>
+                </div>
+                <div class="form__row">
+                  <input type="number" placeholder="Аванс"/>
+                </div>
+                <div class="form__label"></div>
+                <div class="form__row">
+                  <select class="select" data-placeholder="Выбор">
+                    <option value=""></option>
+                    <option value="Значение 1">Значение 1</option>
+                    <option value="Значение 2">Значение 2</option>
+                    <option value="Значение 3">Значение 3</option>
+                    <option value="Значение 4">Значение 4</option>
+                  </select>
+                </div>
+                <div class="form__row">
+                  <input type="email" placeholder="E-mail"/>
+                </div>
+                <div class="form__row">
+                  <input type="text" placeholder="Местонахождение"/>
+                </div>
+                <div class="form__row form__row_full">
+                  <textarea type="text" placeholder="Дополнительная информация"></textarea>
+                </div>
+                <div class="form__row form__row_full">
+                  <div class="form__grup">
+                    <label class="form__check">
+                      <input type="radio" name="test" checked="checked" value="test"/><span>radio 1</span>
+                    </label>
+                    <label class="form__check">
+                      <input type="radio" name="test" value="test_2"/><span>radio 2</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form__row"><span class="form__text">Поля, помеченные *, обязательны к заполнения</span></div>
+                <div class="form__row">
+                  <div class="button">
+                    <button class="btn" id="btn_didisabled_js" type="submit">Отправить</button>
+                  </div>
+                </div>
+                <div class="form__row form__row_full">
+                  <div class="form__privacy">
+                    <label class="form__check">
+                      <input id="check_checked" type="checkbox" checked="checked"/><span>Прочитал(-а) Пользовательское соглашение и соглашаюсь с <a href="#" target="_blank">политикой обработки персональных данных</a></span>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!-- end form-->
+        <!-- begin faq-->
+        <section class="faq section" id="faq">
+          <div class="container_center">
+            <h2 class="section__title">F.A.Q.</h2>
+            <div class="faq__content">
+              <div class="collapse" data-collapse-wrapper="">
+                <div class="collapse__title open" data-collapse=""> <span>Вопрос о школе</span></div>
+                <!-- Добавить класс open для открытого состояния-->
+                <div class="collapse__body open" data-collapse-body="">
+                  <p>Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.</p>
+                  <p>В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.</p>
+                </div>
+              </div>
+              <div class="collapse" data-collapse-wrapper="">
+                <div class="collapse__title" data-collapse=""><span>Структура рынка нейтрализует повторный контакт, не считаясь с затратами</span></div>
+                <div class="collapse__body" data-collapse-body="">
+                  <p>Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.</p>
+                  <p>В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.</p>
+                </div>
+              </div>
+              <div class="collapse" data-collapse-wrapper="">
+                <div class="collapse__title" data-collapse=""><span>Потребительский рынок упорядочивает рейтинг</span></div>
+                <div class="collapse__body" data-collapse-body="">
+                  <p>Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.</p>
+                  <p>В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end faq-->
+        <!-- begin tabsPreview-->
+        <section class="tabsPreview section" id="tabsPreview">
+          <div class="container_center">
+            <h2 class="section__title">tabs Preview</h2>
+            <div class="tabsPreview__content">
+              <div class="tabs__wrapper">
+                <div class="tabs">
+                  <div class="tab">Вкладка 1</div>
+                  <div class="tab">Вкладка 2</div>
+                  <div class="tab">Вкладка 3</div>
+                </div>
+                <div class="tabs__content">
+                  <div class="tab__item">Содержимое 1</div>
+                  <div class="tab__item">Содержимое 2</div>
+                  <div class="tab__item">Содержимое 3</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end tabsPreview-->
+        <!-- begin dropPreview-->
+        <section class="dropPreview section" id="dropPreview">
+          <div class="container_center">
+            <h2 class="section__title">drop Preview</h2>
+            <div class="dropPreview__content">
+              <div class="drop">
+                <div class="drop__toggle">Click me</div>
+                <div class="drop__list">
+                  <div class="drop__item">Item 1</div>
+                  <div class="drop__item">Item 2</div>
+                  <div class="drop__item">Item 3</div>
+                  <div class="drop__item">Item 4</div>
+                </div>
+              </div>
+              <div class="drop">
+                <div class="drop__toggle">Click me</div>
+                <div class="drop__list">
+                  <div class="drop__item">Item 1</div>
+                  <div class="drop__item">Item 2</div>
+                  <div class="drop__item">Item 3</div>
+                  <div class="drop__item">Item 4</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end dropPreview-->
+        <!-- begin programsInfo-->
+        <section class="section">
+          <div class="container_center">
+            <div class="programsInfo">
+              <div class="programsInfo__item">
+                <div class="programsInfo__number">12</div>
+                <div class="programsInfo__text">Программ</div>
+              </div>
+              <div class="programsInfo__item">
+                <div class="programsInfo__number">25</div>
+                <div class="programsInfo__text">Компетенций</div>
+              </div>
+              <div class="programsInfo__item">
+                <div class="programsInfo__number">29</div>
+                <div class="programsInfo__text">Преподавателей <br>и экспертов</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end programsInfo-->
+      </main>
+      <footer class="footer">
+        <div class="footer__content">
+          <p><script type="text/javascript">document.write(new Date().getFullYear());</script></p>
+        </div>
+      </footer>
+      <div class="toTop"><a href="#wrapper"> <i class="icon_to_top"></i></a></div>
+      <!-- Begin Modal modalVideo-->
+      <div class="modal fade modalVideo" id="modalVideo">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-body"> 
+              <div class="modalVideo__wraper"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal modalVideo-->
+      <!-- Begin Modal info-->
+      <div class="modal fade info" id="info">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="form__message"></div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal info-->
+      <script src="../../js/jquery.js"></script>
+      <script src="../../js/jquery.maskedinput.min.js"></script>
+      <script src="../../js/modal.js"></script>
+      <script src="../../js/swiper-bundle.min.js"></script>
+      <script src="../../js/slider.js"></script>
+      <script src="../../js/select2.min.js"></script>
+      <script src="../../js/jquery.event.move.js"></script>
+      <script src="../../js/jquery.twentytwenty.js"></script>
+      <script src="../../js/jquery.marquee.min.js"></script>
+      <script src="../../js/aos.js"></script>
+      <script src="../../js/fancybox.min.js"></script>
+      <script src="../../js/jquery-ui.min.js"></script>
+      <script src="../../js/jquery-ui-touch-punch.js"></script>
+      <script src="../../js/form.js"></script>
+      <script src="../../js/function.js"></script>
+    </div>
+  </body>
+</html>
