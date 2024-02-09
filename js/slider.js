@@ -1,27 +1,29 @@
 $(document).ready(function() {
 
 
-    const certificate = new Swiper('.certificate-swiper-js', {
+    const service = new Swiper('.service_swiper_js', {
         slidesPerView: 2,
-        spaceBetween: 10,
+        spaceBetween: 8,
         speed: 500,
         loop: true,
-        // autoplay: {
-        //   delay: 5000,
-        // },
+        autoplay: {
+          delay: 5000,
+        },
 
         navigation: {
-            nextEl: '.icon_arrow_right',
-            prevEl: '.icon_arrow_left',
+            nextEl: '.service__arrows .icon_arrow_right',
+            prevEl: '.service__arrows .icon_arrow_left',
         },
-        pagination: {
-            el: '.certificate__dotted',
-            clickable: true,
+
+        scrollbar: {
+          el: ".swiper-scrollbar",
+          // hide: true,
         },
 
         breakpoints: {
             768: {
-                spaceBetween: 24,
+                loop: false,
+                spaceBetween: 30,
                 slidesPerView: 3,
             },
 

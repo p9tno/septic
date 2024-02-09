@@ -1,0 +1,38 @@
+.info {
+    padding-top: 3.75em;
+    @media (min-width: 768px) {
+        padding-top: 7.5em;
+    }
+
+    &__content {
+        width: 16.25em;
+        margin: 0 auto;
+        @media (min-width: 768px) {
+            width: auto;
+            margin: 0;
+            text-align: center;
+        }
+
+        p {
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            font-size: 0.875em;
+            @media (min-width: 768px) {
+                font-size: 1em;
+            }
+
+            br {
+                display: none;
+                @media (min-width: 768px) {
+                    display: inline;
+                }
+            }
+        }
+    }
+}

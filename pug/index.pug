@@ -20,12 +20,74 @@ block content
     // end firstscreen
 
     // begin info
-    section#info1.info.section
+    section#info.info.section
         .container_center
             .info__content
+                p Обращайтесь за профессиональным ремонтом и обслуживанием.<br> услуги наше компании и провести сервестное обслужевание техническое полное вашего септика. 
 
+                p По итогам выполненных работ заказчик получает гарантию качества. Все операции мастера выполняют в соответствии с актуальными нормативными требованиями.
 
     // end info
+
+    // begin service
+    section#service.service.section
+        .container_center
+            h2.section__title.md Обслуживание и ремонт септиков различных моделий   
+            .service__slider
+                .swiper.service_swiper_js
+                    .swiper-wrapper
+                        each item in ['1', '2', '3', '4', '5', '6', '1', '2', '3', '4', '5', '6', '1', '2', '3', '4', '5', '6', '1', '2', '3', '4', '5', '6',]
+
+                            .swiper-slide
+                                .service__item
+                                    .service__title Топас
+                                    .service__desc топал эко
+                                    .service__img.img
+                                        img(src="../img/service.webp" alt="image" loading="lazy")
+                                    .service__btn
+                                        a.btn.show_modal_js(href="#feedback")
+                                            span Заказать
+
+                    .swiper-scrollbar.service__scrollbar.desktop
+                .swiper-arrows.service__arrows.desktop
+                    i.icon_arrow_left
+                    i.icon_arrow_right
+
+
+
+    // end service
+
+    // begin advantages
+    section#advantages.advantages.section
+        .container_center
+            h3.section__title Наши преимушества
+            .advantages__grid
+                each item in [{img: '1', title: 'Мастера укомплектованы всем необходимым'}, {img: '2', title: 'Запчасти и расходники в наличии у мастера '}, {img: '3', title: 'Срочный выезд-выезжаем в течении 15 минут'}]
+                    .advantages__item
+                        .advantages__inner(style="background-image: url('../img/advantages_"+item.img+".webp')")
+                            .advantages__title=item.title
+
+
+    // end advantages
+
+    // begin callback
+    section#callback.callback.section
+        .container_center
+            .callback__wrap
+                .callback__img(style="background-image: url('../img/callback.webp')")
+                    .callback__question.img
+                        img(src="../img/question.webp" alt="image" loading="lazy")
+                .callback__content
+                    .callback__title Не знаете марку септика? Позвоните и мы подскажем. Или отправьте фото в Ватсап.
+                    .callback__btn
+                        a.btn.btn_lg(href="#")
+                            span Консультация Мастера
+
+                        a.btn.btn_lg.btn_success(href="#")
+                            i.icon_whatsapp
+                            span Написать В Whatsapp
+
+    // end callback
 
 
     // begin projectBtn

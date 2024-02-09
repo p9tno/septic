@@ -10,6 +10,10 @@
 @import 'core/header';
 
 @import 'sections/firstscreen';
+@import 'sections/info';
+@import 'sections/service';
+@import 'sections/advantages';
+@import 'sections/callback';
 
 @import 'core/footer';
 
@@ -17,3 +21,4 @@
 @import 'core/buttons';
 @import 'core/collapse';
 @import 'vendor/modal';
+@import 'vendor/swiper';
