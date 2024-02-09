@@ -2,17 +2,31 @@ extends layout/layout.pug
 
 block content
 
-
-    // begin lorem
-    section#lorem.lorem.section
+    // begin firstscreen
+    section#firstscreen.firstscreen.section.img_bg_wrap
+        .firstscreen__img.img_bg
+            img(src="../img/firstscreen.webp" alt="image" loading="lazy")
         .container_center
-            h2.section__title lorem
-                i.icon_phone
-            .lorem__content
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore odit nulla sapiente deserunt architecto. Quod corrupti laboriosam earum officiis, quas vitae recusandae, eaque ipsa quam deserunt veniam incidunt. Culpa, sapiente!
+            .firstscreen__content
+                h1.section__title.lg Обслуживание и ремонт септиков в Ивантеевка 
+                .firstscreen__btn
+                    a.btn.btn_success(href="#")
+                        i.icon_phone
+                        span Позвонить
+                    a.btn.show_modal_js(href="#feedback") 
+                        span Оставить заявку
 
 
-    // end lorem
+    // end firstscreen
+
+    // begin info
+    section#info1.info.section
+        .container_center
+            .info__content
+
+
+    // end info
+
 
     // begin projectBtn
     section#projectBtn.projectBtn.section
@@ -47,81 +61,6 @@ block content
 
     // end projectBtn
 
-    // begin projectModal
-    section#projectModal.projectModal.section
-        .container_center
-            h2.section__title
-                span Модальные окна
-            .section__content
-                a.btn.show_modal_js(href="#info") Собщение
-                br
-                br
-                span.btn.youtubeModal_js#rsDoGqnPE4c Видео
-
-                .youtubeModal-js#rsDoGqnPE4c
-
-    // end projectModal
-
-
-        // begin form
-    section#form.form.section
-        .container_center
-            .form__content
-                h1.form__title Подать заявку на лизинг
-                i.icon_close    
-                form.form.form_grid(action="send.php")
-                    //- из какой формы на сайте
-                    input(type="hidden" name="subject" value="форма в футоре")
-                    //- проверка спама
-                    input(type="hidden" name="notspam" value="")
-                    .form__row
-                        input(type="text", required placeholder="Предмет лизинга*")
-                    .form__row
-                        input(type="number", placeholder="ИНН")
-                    .form__row
-                        input(type="number", placeholder="Стоимость")
-                    .form__row
-                        input(type="text", placeholder="Контактное лицо")
-                    .form__row
-                        input(type="number", placeholder="Колличество")
-                    .form__row
-                        input(type="text", required placeholder="Телефон*")
-                    .form__row
-                        input(type="number", placeholder="Аванс")
-                    .form__label
-                    .form__row
-                        select.select(data-placeholder="Выбор")
-                            option(value="")
-                            option(value="Значение 1") Значение 1
-                            option(value="Значение 2") Значение 2
-                            option(value="Значение 3") Значение 3
-                            option(value="Значение 4") Значение 4
-                    .form__row
-                        input(type="email", placeholder="E-mail")
-                    .form__row
-                        input(type="text", placeholder="Местонахождение")
-                    .form__row.form__row_full
-                        textarea(type="text", placeholder="Дополнительная информация")
-                    .form__row.form__row_full
-                        .form__grup
-                            label.form__check
-                                input(type="radio" name="test" checked="checked" value="test")
-                                span radio 1
-                            label.form__check
-                                input(type="radio" name="test" value="test_2")
-                                span radio 2
-
-                    .form__row
-                        span.form__text Поля, помеченные *, обязательны к заполнения
-                    .form__row
-                        .button
-                            button.btn#btn_didisabled_js(type="submit") Отправить
-                    .form__row.form__row_full
-                        .form__privacy
-                            label.form__check
-                                input#check_checked(type="checkbox" checked="checked")
-                                span Прочитал(-а) Пользовательское соглашение и соглашаюсь с <a href="#" target="_blank">политикой обработки персональных данных</a>
-    // end form
 
     // begin faq
     section#faq.faq.section

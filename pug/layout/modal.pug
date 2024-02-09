@@ -1,16 +1,23 @@
-// Begin Modal modalVideo
-.modal.fade.modalVideo#modalVideo
-    .modal-dialog
-        .modal-content
-            a(href="#" class="modal-close" data-dismiss="modal")
-            .modal-body 
-                .modalVideo__wraper
-// End modal modalVideo
 
-// Begin Modal info
-.modal.fade.info#info
+
+
+// Begin Modal feedback
+.modal.fade.feedback#feedback
     .modal-dialog
         .modal-content
             a(href="#" class="modal-close" data-dismiss="modal")
-            .form__message
-// End modal info
+                i.icon_close
+            .modal-header
+                .modal-title Заполните форму
+                .modal-desc Оставьте свой телефон, и мы Вам перезвоним в ближайшее время
+            .modal-body
+                form.form
+                    .form__row
+                        input(type="text" placeholder="Ваше Имя")
+                    .form__row
+                        // add class .invalid for input
+                        input(type="text" placeholder="+ 7 (___) ____-__-___")
+                    .form__row
+                        button.btn(type="submit") Оставить заявку
+
+// End modal feedback

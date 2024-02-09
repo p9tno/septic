@@ -1,4 +1,5 @@
 // Modal / bootstrap ------------------------------------------
+
 .modal {
     display: none;
     overflow: auto;
@@ -18,35 +19,30 @@
 
     &-close {
         position: absolute;
-        width: 1.5em;
-        height: 1.5em;
-        right: 1em;
-        top: 1em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $main_color;
-        // background: image-url('close.svg') no-repeat center center;
-        &:after,
-        &:before {
-            content: '';
-            position: absolute;
-            display: block;
-            width: 100%;
-            border-top: 2px solid;
+        top: 0.625em;
+        right: 1.25em;
+        color: $color_danger;
+        text-decoration: none;
+
+        @media (min-width: 768px) {
+            top: 1em;
+            right: 2.625em;
+            opacity: 1;
         }
 
-        &:before {
-            transform: rotate(45deg);
+        i {
+            font-size: 1em;
+            @media (min-width: 768px) {
+                font-size: 1.25em;
+            }
         }
 
-        &:after {
-            transform: rotate(-45deg);
+        @media (min-width: 768px) {
+            &:hover {
+                opacity: 0.8;
+            }
         }
 
-        &:hover {
-            opacity: 0.8;
-        }
     }
 
     &.fade .modal-dialog {
@@ -69,19 +65,25 @@
         position: relative;
         width: auto;
         margin: auto;
-        // max-width: 40em;
-        width: 40em;
+        width: 18.125em;
+        @media (min-width: 768px) {
+            width: 26.25em;
+        }
     }
 
     &-content {
         position: relative;
-        background-color: #fff;
+        background-color: #D3E2FF;
         border: none;
-        border-radius: 0;
+        border-radius: 1.25em;
         box-shadow: 0 0.2em 0.6em rgba(0,0,0,.5);
         background-clip: padding-box;
         outline: 0;
-        padding: 1em 1.1em;
+        padding: 2.125em 0.75em 0.9375em;
+        @media (min-width: 768px) {
+            padding: 4.125em 1.875em 1.375em;
+
+        }
     }
 
     &-backdrop {
@@ -105,23 +107,30 @@
     }
 
     &-header {
-        padding: 1em 0;
-        /* 16/16 */
-        min-height: 1em;
-        /* 16/16 */
-        color: #666;
-        font-size: 1.125em;
-        /* 18/16 */
-
-        .close {
-            margin-top: -0.125em;
-            /* 2/16 */
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     &-title {
-        margin: 0;
-        line-height: 1.4;
+        font-size: 1.25em;
+        font-weight: 700;
+
+        @media (min-width: 768px) {
+            font-size: 1.5em;
+        }
+    }
+
+    &-desc {
+        font-size: 0.875em;
+        margin-top: 0.7em;
+        width: 12.5em;
+        @media (min-width: 768px) {
+            font-size: 0.9375em;
+            margin-top: 1em;
+            width: 18em;
+        }
     }
 
     &-body {
@@ -129,69 +138,4 @@
         padding: 0;
     }
 
-    &-footer {
-        margin-top: 1em;
-        /* 16/16 */
-        padding: 1.25em;
-        /* 20/16 */
-        text-align: right;
-        border-top: 0.0625em solid #e5e5e5;
-        /* 1/16 */
-
-        .btn+.btn {
-            margin-left: 0.3125em;
-            /* 5/16 */
-            margin-bottom: 0;
-        }
-
-        .btn-group .btn+.btn {
-            margin-left: -0.0625em;
-            /* 1/16 */
-        }
-
-        .btn-block+.btn-block {
-            margin-left: 0;
-        }
-    }
-
 }
-
-.modalVideo {
-    .modal-dialog {
-        max-width: 19.25em;
-        width: 100%;
-        @media (min-width: 768px) {
-            max-width: 73.25em;
-        }
-    }
-
-    .modal-content {
-        padding: 0;
-        background: none;
-    }
-
-    .modal-close {
-        right: 1em;
-        top: -2em;
-        @media (min-width: 768px) {
-            right: -2em;
-            top: -3em;
-        }
-
-    }
-
-    &__wraper {
-        width: 100%;
-        height: 10.75em;
-
-        @media (min-width: 768px) {
-            height: 41.25em;
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-        }
-    }
-}
-

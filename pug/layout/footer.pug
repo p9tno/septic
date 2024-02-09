@@ -1,4 +1,25 @@
 footer.footer
-    .footer__content
-        p <script type="text/javascript">document.write(new Date().getFullYear());</script>
+    .footer__row
+        .footer__col
+            .footer__desc Обращаем ваше внимание на то, что данный интернет-сайт, носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации
 
+        .footer__col
+            nav.footer__navbar
+                .menu__label Сервис септиков
+                ul.menu
+                    each item in ['Обслуживание септиков', 'Ремонт септиков', 'Наращивание септиков', 'Модернизация септиков', 'Консервация септика', ]
+
+                        li.menu__item
+                            a(href="#")=item
+
+        .footer__col
+            .footer__info
+                .footer__item
+                    b Адрес
+                    span Город Дмитров, Пушкинский <br>городской округ.
+                .footer__item
+                    b График работы
+                    span Режим: 7:00-21:00
+                .footer__item
+                    b Телефон
+                    a(href="#") 8900 000 0000

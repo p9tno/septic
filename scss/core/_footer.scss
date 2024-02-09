@@ -1,14 +1,145 @@
 /* Footer
  ----------------------------------------------------------------------------- */
 .footer {
-	position: relative;
-	padding: 1em 0;
-	background-color: #ddd;
+	background-color: $color_black;
+	color: $color_white;
+	padding: 1.625em 1.125em;
+	@media (min-width: 768px) {
+		padding: 3.625em 13.125em;
+	}
 
-	&__content {
-		@extend .container_center;
+	&__row {
+		@media (min-width: 768px) {
+			display: grid;
+			grid-template-columns: 46.25em auto;
+			grid-row-gap: 3.125em;
+			grid-column-gap: 1em;
+		}
+	}
+
+	&__col {
+		margin-top: 1.5em;
+
+		&:first-child {
+			margin-top: 0;
+		}
+		@media (min-width: 768px) {
+			margin-top: 0;
+
+			&:nth-child(2) {
+				grid-row-start: 1;
+				grid-row-end: 3;
+				grid-column-start: 2;
+			}
+		}
+	}
+
+	&__desc {
+		color: rgba(210, 210, 210, 0.64);
+		font-weight: 500;
+		font-size: 0.75em;
+		@media (min-width: 768px) {
+			font-size: 1em;
+		}
+
+	}
+
+	&__navbar {
+		@media (min-width: 768px) {
+			margin-left: auto;
+			width: fit-content;
+		}
+	}
+
+	&__info {
+		@media (min-width: 768px) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 40em;
+		}
+	}
+
+	&__item {
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		flex-direction: column;
+		gap: 0.9375em;
+		margin-top: 0.9375em;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		@media (min-width: 768px) {
+			margin-top: 0;
+
+			gap: 0.625em;
+			text-align: center;
+		}
+
+		b {
+			font-family: $second_font_family;
+			font-size: 1.125em;
+			font-weight: 700;
+			@media (min-width: 768px) {
+				color: #A8A8A8;
+				font-size: 1.25em;
+				font-weight: 600;
+
+			}
+
+		}
+
+		a,
+		span {
+			text-decoration: none;
+			color: $color_white;
+			font-size: 0.875em;
+			@media (min-width: 768px) {
+				font-size: 1em;
+
+			}
+		}
+	}
+
+	.menu {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		&__label {
+			font-family: $second_font_family;
+			font-size: 1.125em;
+			font-weight: 700;
+			@media (min-width: 768px) {
+				font-size: 1.5em;
+			}
+		}
+
+		&__item {
+			margin-top: 0.3125em;
+
+			&:first-child {
+				margin-top: 0.9375em;
+			}
+			@media (min-width: 768px) {
+				margin-top: 0.625em;
+
+				&:first-child {
+					margin-top: 1.875em;
+				}
+
+			}
+
+			a {
+				font-size: 0.875em;
+				color: $color_white;
+				text-decoration: none;
+				@media (min-width: 768px) {
+					font-size: 1em;
+				}
+			}
+		}
+
 	}
 }

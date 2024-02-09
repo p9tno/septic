@@ -56,6 +56,21 @@ window.onload = function () {
 }
 
 $(document).ready(function() {
+    let mediaQuerySize = 768;
+    let windowWidth = screen.width;
+    // console.log(windowWidth);
+    if (windowWidth >= mediaQuerySize) {
+        console.log('desktop');
+        // toggleDesktopMenu();
+        // stikyMenu();
+    } else {
+        console.log('mobile');
+        toggleMobileSubMenu();
+        // toggleServicesMenu();
+        // togglePriceMenu();
+        // scrollCurrentTab();
+    }
+
     // console.log('ready');
     window.addEventListener('resize', () => {
         // Запрещаем выполнение скриптов при смене только высоты вьюпорта (фикс для скролла в IOS и Android >=v.5)
@@ -96,13 +111,23 @@ $(document).ready(function() {
 
     function openMobileNav() {
         $('.header__toggle').click(function(event) {
-            // console.log('Показ меню');
-            $('.navbar').toggleClass('navbar_open');
+            console.log('Показ меню');
+            $('.header__navbar').toggleClass('header__navbar_open');
             $('.header__toggle').toggleClass('header__toggle_open');
             $( 'body' ).toggleClass( 'nav-open' );
         });
     };
     openMobileNav();
+
+    // only mobile function
+    function toggleMobileSubMenu() {
+        $('.menu__item_has_children > a').click(function(event) {
+            event.preventDefault();
+            let submenu = $(this).closest('.menu__item').find('.menu__sub').eq(0);
+            $(this).toggleClass('active');
+            submenu.slideToggle();
+        })
+    }
 
     function showMore(classItem, btn) {
         // let classItem = '.vacancies__item';

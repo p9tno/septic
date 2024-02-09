@@ -25,7 +25,7 @@
     <div class="wrapper" id="wrapper">
       <header class="header">
         <div class="header__content">
-          <div class="header__logo"><a class="logo" href="/"><svg width="100%" height="100%" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="header__logo desktop" href="/"><svg width="100%" height="100%" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_500_811)">
 <rect width="88" height="88" rx="44" fill="#0349FC"/>
 <rect x="-4" y="29" width="50" height="50" rx="25" fill="#5685FF"/>
@@ -36,7 +36,8 @@
 <rect width="88" height="88" rx="44" fill="white"/>
 </clipPath>
 </defs>
-</svg></a></div>
+</svg>
+          </div>
           <nav class="header__navbar">
             <ul class="menu">
               <li class="menu__item"><a href="#">Главная</a></li>
@@ -60,19 +61,28 @@
             </ul>
           </nav>
           <div class="header__phone"><a class="btn btn_lg" href="#"><i class="icon_phone"></i><span>+7(900)000-00-00</span></a></div>
-          <div class="header__toggle"></div>
+          <div class="header__toggle mobile"></div>
         </div>
       </header>
       <main class="main_content">
-        <!-- begin lorem-->
-        <section class="lorem section" id="lorem">
+        <!-- begin firstscreen-->
+        <section class="firstscreen section img_bg_wrap" id="firstscreen">
+          <div class="firstscreen__img img_bg"><img src="../img/firstscreen.webp" alt="image" loading="lazy"/></div>
           <div class="container_center">
-            <h2 class="section__title">lorem<i class="icon_phone"></i></h2>
-            <div class="lorem__content"></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore odit nulla sapiente deserunt architecto. Quod corrupti laboriosam earum officiis, quas vitae recusandae, eaque ipsa quam deserunt veniam incidunt. Culpa, sapiente!</p>
+            <div class="firstscreen__content">
+              <h1 class="section__title lg">Обслуживание и ремонт септиков в Ивантеевка </h1>
+              <div class="firstscreen__btn"><a class="btn btn_success" href="#"><i class="icon_phone"></i><span>Позвонить</span></a><a class="btn show_modal_js" href="#feedback"> <span>Оставить заявку</span></a></div>
+            </div>
           </div>
         </section>
-        <!-- end lorem-->
+        <!-- end firstscreen-->
+        <!-- begin info-->
+        <section class="info section" id="info1">
+          <div class="container_center">
+            <div class="info__content"></div>
+          </div>
+        </section>
+        <!-- end info-->
         <!-- begin projectBtn-->
         <section class="projectBtn section" id="projectBtn">
           <div class="container_center">
@@ -81,92 +91,6 @@
           </div>
         </section>
         <!-- end projectBtn-->
-        <!-- begin projectModal-->
-        <section class="projectModal section" id="projectModal">
-          <div class="container_center">
-            <h2 class="section__title"><span>Модальные окна</span></h2>
-            <div class="section__content"><a class="btn show_modal_js" href="#info">Собщение</a><br/><br/><span class="btn youtubeModal_js" id="rsDoGqnPE4c">Видео</span>
-              <div class="youtubeModal-js" id="rsDoGqnPE4c"></div>
-            </div>
-          </div>
-        </section>
-        <!-- end projectModal// begin form
-        -->
-        <section class="form section" id="form">
-          <div class="container_center">
-            <div class="form__content">
-              <h1 class="form__title">Подать заявку на лизинг</h1><i class="icon_close">   </i>
-              <form class="form form_grid" action="send.php">
-                <input type="hidden" name="subject" value="форма в футоре"/>
-                <input type="hidden" name="notspam" value=""/>
-                <div class="form__row">
-                  <input type="text" required="required" placeholder="Предмет лизинга*"/>
-                </div>
-                <div class="form__row">
-                  <input type="number" placeholder="ИНН"/>
-                </div>
-                <div class="form__row">
-                  <input type="number" placeholder="Стоимость"/>
-                </div>
-                <div class="form__row">
-                  <input type="text" placeholder="Контактное лицо"/>
-                </div>
-                <div class="form__row">
-                  <input type="number" placeholder="Колличество"/>
-                </div>
-                <div class="form__row">
-                  <input type="text" required="required" placeholder="Телефон*"/>
-                </div>
-                <div class="form__row">
-                  <input type="number" placeholder="Аванс"/>
-                </div>
-                <div class="form__label"></div>
-                <div class="form__row">
-                  <select class="select" data-placeholder="Выбор">
-                    <option value=""></option>
-                    <option value="Значение 1">Значение 1</option>
-                    <option value="Значение 2">Значение 2</option>
-                    <option value="Значение 3">Значение 3</option>
-                    <option value="Значение 4">Значение 4</option>
-                  </select>
-                </div>
-                <div class="form__row">
-                  <input type="email" placeholder="E-mail"/>
-                </div>
-                <div class="form__row">
-                  <input type="text" placeholder="Местонахождение"/>
-                </div>
-                <div class="form__row form__row_full">
-                  <textarea type="text" placeholder="Дополнительная информация"></textarea>
-                </div>
-                <div class="form__row form__row_full">
-                  <div class="form__grup">
-                    <label class="form__check">
-                      <input type="radio" name="test" checked="checked" value="test"/><span>radio 1</span>
-                    </label>
-                    <label class="form__check">
-                      <input type="radio" name="test" value="test_2"/><span>radio 2</span>
-                    </label>
-                  </div>
-                </div>
-                <div class="form__row"><span class="form__text">Поля, помеченные *, обязательны к заполнения</span></div>
-                <div class="form__row">
-                  <div class="button">
-                    <button class="btn" id="btn_didisabled_js" type="submit">Отправить</button>
-                  </div>
-                </div>
-                <div class="form__row form__row_full">
-                  <div class="form__privacy">
-                    <label class="form__check">
-                      <input id="check_checked" type="checkbox" checked="checked"/><span>Прочитал(-а) Пользовательское соглашение и соглашаюсь с <a href="#" target="_blank">политикой обработки персональных данных</a></span>
-                    </label>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </section>
-        <!-- end form-->
         <!-- begin faq-->
         <section class="faq section" id="faq">
           <div class="container_center">
@@ -200,30 +124,57 @@
         <!-- end faq-->
       </main>
       <footer class="footer">
-        <div class="footer__content">
-          <p><script type="text/javascript">document.write(new Date().getFullYear());</script></p>
+        <div class="footer__row">
+          <div class="footer__col">
+            <div class="footer__desc">Обращаем ваше внимание на то, что данный интернет-сайт, носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации</div>
+          </div>
+          <div class="footer__col">
+            <nav class="footer__navbar">
+              <div class="menu__label">Сервис септиков</div>
+              <ul class="menu">
+                <li class="menu__item"><a href="#">Обслуживание септиков</a></li>
+                <li class="menu__item"><a href="#">Ремонт септиков</a></li>
+                <li class="menu__item"><a href="#">Наращивание септиков</a></li>
+                <li class="menu__item"><a href="#">Модернизация септиков</a></li>
+                <li class="menu__item"><a href="#">Консервация септика</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__col">
+            <div class="footer__info">
+              <div class="footer__item"><b>Адрес</b><span>Город Дмитров, Пушкинский <br>городской округ.</span></div>
+              <div class="footer__item"><b>График работы</b><span>Режим: 7:00-21:00</span></div>
+              <div class="footer__item"><b>Телефон</b><a href="#">8900 000 0000</a></div>
+            </div>
+          </div>
         </div>
       </footer>
-      <!-- Begin Modal modalVideo-->
-      <div class="modal fade modalVideo" id="modalVideo">
+      <!-- Begin Modal feedback-->
+      <div class="modal fade feedback" id="feedback">
         <div class="modal-dialog">
-          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
-            <div class="modal-body"> 
-              <div class="modalVideo__wraper"></div>
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"><i class="icon_close"></i></a>
+            <div class="modal-header">
+              <div class="modal-title">Заполните форму</div>
+              <div class="modal-desc">Оставьте свой телефон, и мы Вам перезвоним в ближайшее время</div>
+            </div>
+            <div class="modal-body">
+              <form class="form">
+                <div class="form__row">
+                  <input type="text" placeholder="Ваше Имя"/>
+                </div>
+                <div class="form__row">
+                  <!-- add class .invalid for input-->
+                  <input type="text" placeholder="+ 7 (___) ____-__-___"/>
+                </div>
+                <div class="form__row">
+                  <button class="btn" type="submit">Оставить заявку</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
-      <!-- End modal modalVideo-->
-      <!-- Begin Modal info-->
-      <div class="modal fade info" id="info">
-        <div class="modal-dialog">
-          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
-            <div class="form__message"></div>
-          </div>
-        </div>
-      </div>
-      <!-- End modal info-->
+      <!-- End modal feedback-->
       <script src="js/jquery.js"></script>
       <script src="js/modal.js"></script>
       <script src="js/swiper-bundle.min.js"></script>

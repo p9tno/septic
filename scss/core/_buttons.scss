@@ -2,7 +2,7 @@
 
 .btn {
 	position: relative;
-	z-index: 10;
+	z-index: 1;
 	overflow: hidden;
 
 	display: inline-flex;
@@ -19,7 +19,7 @@
 
 	font-family: $main_font_family;
 	font-size: 1em;
-	font-weight: 700;
+	font-weight: 600;
 	text-decoration: none;
 	text-align: center;
 
@@ -30,6 +30,7 @@
 	@media (min-width: 768px) {
 		padding: 1.138em 1em;
 		min-width: 11.875em;
+		font-weight: 700;
 	}
 
 	&:before {

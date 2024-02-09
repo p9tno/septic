@@ -1,0 +1,38 @@
+.firstscreen {
+    padding: 7.25em 0 4.375em;
+    @media (min-width: 768px) {
+        padding: 14.5em 0 11em;
+    }
+
+    .section__title {
+        color: $color_white;
+        margin: 0 auto;
+        width: 10em;
+        @media (min-width: 768px) {
+            width: 12em;
+        }
+
+    }
+
+    &__content {
+        position: relative;
+    }
+
+    &__btn {
+        margin-top: 1.875em;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.625em;
+
+        @media (min-width: 768px) {
+            margin-top: 5.125em;
+            flex-direction: row;
+            gap: 1.875em;
+
+        }
+    }
+
+}
