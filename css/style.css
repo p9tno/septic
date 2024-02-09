@@ -1440,6 +1440,52 @@ body {
   margin-top: 0;
 }
 
+.cost .section__title {
+  width: 17em;
+}
+.cost__slider {
+  position: relative;
+  margin-top: 1.875em;
+}
+@media (min-width: 768px) {
+  .cost__slider {
+    margin-top: 3.125em;
+  }
+}
+.cost__title {
+  font-size: 1.5em;
+}
+.cost__desc {
+  margin: 4.29em auto 0;
+  text-align: center;
+  font-size: 0.875em;
+  width: 18em;
+}
+@media (min-width: 768px) {
+  .cost__desc {
+    margin: 3.75em auto 0;
+    width: 32em;
+    font-size: 2em;
+  }
+}
+
+.table {
+  margin-top: 0.9375em;
+  border-radius: 0.9375em;
+  border: 0.0625em solid #BCBBBB;
+  border-top: 0;
+}
+.table__row {
+  display: flex;
+  justify-content: space-between;
+}
+.table__col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1em;
+}
 /* Footer
  ----------------------------------------------------------------------------- */
 .footer {

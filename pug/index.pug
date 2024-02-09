@@ -67,7 +67,6 @@ block content
                         .advantages__inner(style="background-image: url('../img/advantages_"+item.img+".webp')")
                             .advantages__title=item.title
 
-
     // end advantages
 
     // begin callback
@@ -88,6 +87,43 @@ block content
                             span Написать В Whatsapp
 
     // end callback
+
+    // begin cost
+    section#cost.cost.section
+        .container_center
+            h3.section__title Стоимость Обслуживания септиков в Ивантеевке
+            .cost__slider
+                .swiper.cost_swiper_js
+                    .swiper-wrapper
+                        each item in ['', '', '', '', ]
+                            .swiper-slide
+                                .cost__item
+                                    .cost__title Топол-Эко
+                                    .table
+                                        .table__head
+                                            .table__row
+                                                .table__col По количеству человек
+                                                .table__col Плановое ТО
+                                                .table__col Полное ТО
+                                        .table__body
+                                            .table__row 
+                                                .table__col 2-3 чел
+                                                .table__col 4500
+                                                .table__col 6000
+                                            .table__row 
+                                                .table__col Более 15
+                                                .table__col.col_2 По договорности
+                                                .table__col
+
+
+                //- .swiper-arrows.cost__arrows.desktop
+                //-     i.icon_arrow_left
+                //-     i.icon_arrow_right
+
+            .cost__desc В стоимость планового и полного обслуживания стоимость выезда уже включена и все профифилактические работы.
+
+
+    // end cost
 
 
     // begin projectBtn

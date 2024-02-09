@@ -30,6 +30,30 @@ $(document).ready(function() {
         }
     });
 
+    const cost = new Swiper('.cost_swiper_js', {
+        slidesPerView: 2,
+        spaceBetween: 8,
+        speed: 500,
+        // loop: true,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+
+        navigation: {
+            nextEl: '.cost__arrows .icon_arrow_right',
+            prevEl: '.cost__arrows .icon_arrow_left',
+        },
+
+
+        breakpoints: {
+            768: {
+                spaceBetween: 34,
+                slidesPerView: 2,
+            },
+
+        }
+    });
+
     const ourhouses = new Swiper('.ourhouses-swiper-js', {
         slidesPerView: 1,
         spaceBetween: 10,
