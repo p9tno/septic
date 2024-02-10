@@ -166,9 +166,9 @@ $(document).ready(function() {
         let toggle = $('[data-collapse]');
 
         toggle.on('click', function() {
-            let id = $(this).data('collapse');
-            let body = $('[data-collapse-body="'+id+'"]');
-            let wrap = body.closest('[data-collapse-wrapper]');
+            let id = $(this).data('collapse'),
+            body = $('[data-collapse-body="'+id+'"]'),
+            wrap = body.closest('[data-collapse-wrapper]');
 
             if (!id) {
                 // $('[data-collapse-wrapper]').removeClass('open');
@@ -179,8 +179,7 @@ $(document).ready(function() {
                 } else {
                     body.slideUp();
                 }
-            }
-            else if (id === 'all') {
+            } else if (id === 'all') {
                 body.slideDown();
                 toggle.addClass('open');
             } else {

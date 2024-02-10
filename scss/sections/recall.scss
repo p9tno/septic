@@ -1,0 +1,35 @@
+.recall {
+    overflow: hidden;
+
+    &__wrap {
+        background-color: $color_info_light;
+        color: $color_white;
+        padding: 0.75em 0;
+        @media (min-width: 768px) {
+            padding: 2.5em 0;
+
+        }
+    }
+
+    &__slider {
+        position: relative;
+        width: 21.875em;
+        margin-top: 1.875em;
+        @media (min-width: 768px) {
+            width: auto;
+            margin-top: 1.5em;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 14.125em;
+        overflow: hidden;
+        border-radius: 0.9375em;
+        @media (min-width: 768px) {
+            border-radius: 1.875em;
+            height: 31.25em;
+        }
+    }
+
+}

@@ -1,13 +1,6 @@
 .service {
     overflow: hidden;
 
-    .section__title {
-        width: 13em;
-        @media (min-width: 768px) {
-            width: 16em;
-        }
-    }
-
     &__slider {
         margin-top: 1.5em;
         width: 33em;

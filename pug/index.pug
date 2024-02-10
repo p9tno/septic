@@ -32,7 +32,7 @@ block content
     // begin service
     section#service.service.section
         .container_center
-            h2.section__title.md Обслуживание и ремонт септиков различных моделий   
+            h2.section__title Обслуживание и ремонт септиков различных моделий   
             .service__slider
                 .swiper.service_swiper_js
                     .swiper-wrapper
@@ -60,7 +60,7 @@ block content
     // begin advantages
     section#advantages.advantages.section
         .container_center
-            h3.section__title Наши преимушества
+            h2.section__title Наши преимушества
             .advantages__grid
                 each item in [{img: '1', title: 'Мастера укомплектованы всем необходимым'}, {img: '2', title: 'Запчасти и расходники в наличии у мастера '}, {img: '3', title: 'Срочный выезд-выезжаем в течении 15 минут'}]
                     .advantages__item
@@ -91,7 +91,7 @@ block content
     // begin cost
     section#cost.cost.section
         .container_center
-            h3.section__title Стоимость Обслуживания септиков в Ивантеевке
+            h2.section__title Стоимость Обслуживания септиков в Ивантеевке
             .cost__slider
                 .swiper.cost_swiper_js
                     .swiper-wrapper
@@ -144,10 +144,39 @@ block content
 
     // end warning
 
+    // begin departure
+    section#departure.departure.section
+        .container_center
+            .departure__wrap
+                .departure__preview
+                    .departure__title Срочный аварийный выезд
+
+                    .departure__img.img
+                        img(src="../img/departure.webp" alt="image" loading="lazy")
+                        .departure__label
+                            span выезжаем в течение 15 минут
+                .departure__content
+                    ul.departure__list
+                        each item in ['Срочный ремонт, пайка и замена компрессора', 'Работаем в выходные дни и даже ночью.', 'Выполняем работу любой сложности, любые модели.', 'Имеем все необходимые комплектующие и инструменты. ', ]    
+                            li.departure__item
+                                i.icon_check
+                                span=item
+                    .departure__form
+                        form.form
+                            .form__row
+                                // add class .invalid for input
+                                input(type="text" placeholder="+ 7 (___) ____-__-___")
+                            .form__row
+                                button.btn.btn_lg.btn_success(type="submit") Отправить вопрос
+
+
+
+    // end departure
+
     // begin price
     section#price.price.section
         .container_center
-            h3.section__title Стоимость ремонта септиков в Ивантеевке
+            h2.section__title Стоимость ремонта септиков в Ивантеевке
             .price__grid
                 each item in ['Замена полавкового переключателя без выезда', 'Замена мембран в копрессоре', 'Замена влагостойки розетки', 'Замена полавкового переключателя без выезда', 'Замена мембран в копрессоре', 'Замена влагостойки розетки','Замена полавкового переключателя без выезда', 'Замена мембран в копрессоре', 'Замена влагостойки розетки', 'Замена полавкового переключателя без выезда', 'Замена мембран в копрессоре', 'Замена влагостойки розетки', 'Замена влагостойки розетки', ]
 
@@ -175,68 +204,91 @@ block content
                 a.btn.shov_more_js(href="#") 
                     span Показать больше
 
-
-
-
     // end price
 
-
-    // begin projectBtn
-    section#projectBtn.projectBtn.section
+    // begin gallery
+    section#gallery.gallery.section
         .container_center
-            h2.section__title
-                span Кнопки
-            .section__content
-                a.btn(href="#") 
-                    span Оставить заявку
-                br
-                br
-                a.btn.btn_success(href="#")
-                    i.icon_phone
-                    span Позвонить
-                br
-                br
-                a.btn(href="#")
-                    span Заказать
-                br
-                br
-                a.btn.btn_lg(href="#")
-                    span Консультация Мастера
-                br
-                br
-                a.btn.btn_lg.btn_success(href="#")
-                    i.icon_whatsapp
-                    span Написать В Whatsapp
-                br
-                br
-                a.btn.btn_lg.btn_success(href="#")
-                    span Отправить вопрос
+            h2.section__title Галерея работ 
+            .gallery__list
+                each item in ['', '', ]
+                    .gallery__item
+                        .gallery__title Обслуживание
+                    .gallery__slider
+                        .swiper.gallery_swiper_js
+                            .swiper-wrapper
+                                each item in [1,2,3,4]
+                                    .swiper-slide
+                                        .gallery__img.img
+                                            img(src="../img/gallery_"+item+".webp" alt="image" loading="lazy")
 
-    // end projectBtn
+                        .swiper-arrows.gallery__arrows.desktop
+                            i.icon_arrow_left
+                            i.icon_arrow_right
 
+
+
+    // end gallery
+
+    // begin recall
+    section#recall.recall.section
+        .recall__wrap
+            .container_center
+                h2.section__title Отзывы
+                .recall__slider
+                    .swiper.recall_swiper_js
+                        .swiper-wrapper
+                            each item in [1,2,3,4]
+                                .swiper-slide
+                                    .recall__img.img
+                                        img(src="../img/recall.webp" alt="image" loading="lazy")
+
+                    .swiper-arrows.recall__arrows.desktop
+                        i.icon_arrow_left
+                        i.icon_arrow_right
+
+    // end recall
 
     // begin faq
     section#faq.faq.section
         .container_center
-            h2.section__title F.A.Q.
+            h2.section__title Вопросы-Ответы
             .faq__content
-                .collapse(data-collapse-wrapper="")
-                    .collapse__title.open(data-collapse="") 
-                        span Вопрос о школе
-                    // Добавить класс open для открытого состояния
-                    .collapse__body.open(data-collapse-body="")
-                        p Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.
+                each item in ['', '', ]
 
-                        p В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.
+                    .faq__col
+                        each item in ['', '', '', ]
+                            .collapse(data-collapse-wrapper="")
+                                .collapse__title(data-collapse="") 
+                                    span Мы не живём на даче зимой. Нужно ли включать станцию пока нас нет.
+                                .collapse__body(data-collapse-body="")
+                                    span Если дом закрывается на всю зиму, то нужно отключить электроэнергию, очистить ил, залить все камеры водой на один метр от дна. А при новом запуске станции подключить...   
 
-                each title in ['Структура рынка нейтрализует повторный контакт, не считаясь с затратами', 'Потребительский рынок упорядочивает рейтинг']
+                        .collapse(data-collapse-wrapper="")
+                            .collapse__title(data-collapse="") 
+                                span Как определить?
+                            .collapse__body(data-collapse-body="")
+                                span Если дом закрывается на всю зиму, то нужно отключить электроэнергию, очистить ил, залить все камеры водой на один метр от дна. А при новом запуске станции подключить...    Если дом закрывается на всю зиму, то нужно отключить электроэнергию, очистить ил, залить все камеры водой на один метр от дна. А при новом запуске станции подключить...                     
 
-                    .collapse(data-collapse-wrapper="")
-                        .collapse__title(data-collapse="")
-                            span= title
-                        .collapse__body(data-collapse-body="")
-                            p Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.
-
-                            p В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.
 
     // end faq
+
+    // begin contacts
+    section#contacts.contacts.section
+        .contacts__wrap
+            .container_center
+                h2.section__title Контакты
+                .contacts__list
+                    .contacts__item
+                        b Адрес
+                        span Город Дмитров, Пушкинский  городской округ.
+
+                    .contacts__item
+                        b График работы
+                        span Режим: 7:00-21:00
+
+                    .contacts__item
+                        b Телефон
+                        a(href="tel:89000000000") 8900 000 0000
+
+    // end contacts

@@ -37,12 +37,7 @@ body {
 	padding: 1.875em 0;
 	@media (min-width: 768px) {
 		padding: 3.75em 0;
-
 	}
-	//
-	// &.pb_0 {
-	// 	padding-bottom: 0;
-	// }
 
 	&__title {
 		margin: 0 auto;
@@ -52,13 +47,8 @@ body {
 		font-size: 1.25em;
 		line-height: 1.1719;
 		@media (min-width: 768px) {
-			font-size: 2.25em;
-		}
-
-		&.md {
-			@media (min-width: 768px) {
-				font-size: 3em;
-			}
+			font-size: 3em;
+			width: 16em;
 		}
 
 		&.lg {
