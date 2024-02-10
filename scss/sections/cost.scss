@@ -3,18 +3,33 @@
         width: 17em;
     }
 
+    .table {
+        margin-top: 0.3125em;
+
+        @media (min-width: 768px) {
+            margin-top: 0.9375em;
+        }
+    }
+    overflow: hidden;
+
     &__slider {
         position: relative;
         margin-top: 1.875em;
+        width: 33em;
         @media (min-width: 768px) {
             margin-top: 3.125em;
+            width: auto;
         }
     }
 
     &__item {}
 
     &__title {
-        font-size: 1.5em;
+        font-size: 0.75em;
+        @media (min-width: 768px) {
+            font-size: 1.5em;
+
+        }
     }
 
     &__arrows {}
@@ -31,30 +46,5 @@
 
         }
     }
-
-}
-
-.table {
-    margin-top: 0.9375em;
-    border-radius: 0.9375em;
-    border: 0.0625em solid #BCBBBB;
-    border-top: 0;
-
-    &__head {}
-
-    &__row {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__col {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 1em;
-    }
-
-    &__body {}
 
 }

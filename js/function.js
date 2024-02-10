@@ -52,23 +52,22 @@ window.onload = function () {
         });
     }
     preloader();
-    // setTimeout( ()=> preloader(),15000 )
 }
 
 $(document).ready(function() {
+
     let mediaQuerySize = 768;
     let windowWidth = screen.width;
     // console.log(windowWidth);
     if (windowWidth >= mediaQuerySize) {
         console.log('desktop');
-        // toggleDesktopMenu();
-        // stikyMenu();
+        showMore('.price__item', '.shov_more_js', start=6, show=6);
+
+
     } else {
         console.log('mobile');
         toggleMobileSubMenu();
-        // toggleServicesMenu();
-        // togglePriceMenu();
-        // scrollCurrentTab();
+        showMore('.price__item', '.shov_more_js', start=3, show=3);
     }
 
     // console.log('ready');
@@ -129,16 +128,16 @@ $(document).ready(function() {
         })
     }
 
-    function showMore(classItem, btn) {
-        // let classItem = '.vacancies__item';
-        // let classItem = class;
+    function showMore(classItem, btn, start = 1, show = 1) {
         let item = $(''+ classItem +'');
         let count = item.length;
-        let start = 1;
-        let show = 1;
 
         item.addClass('d-none');
         $('' + classItem + ':lt(' + start + ')').removeClass('d-none');
+
+        if (start >= count) {
+            $(`${btn}`).parent().remove();
+        }
 
         $(btn).click(function(e) {
             e.preventDefault();
@@ -160,9 +159,8 @@ $(document).ready(function() {
                 $(this).text(more);
             }, 500);
         });
-
     }
-    // showMore('.vacancies__item', '.show_more_v_js');
+
 
     function collapsed() {
         let toggle = $('[data-collapse]');

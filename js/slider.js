@@ -34,10 +34,10 @@ $(document).ready(function() {
         slidesPerView: 2,
         spaceBetween: 8,
         speed: 500,
-        // loop: true,
-        // autoplay: {
-        //   delay: 5000,
-        // },
+        loop: true,
+        autoplay: {
+          delay: 5000,
+        },
 
         navigation: {
             nextEl: '.cost__arrows .icon_arrow_right',
@@ -48,7 +48,6 @@ $(document).ready(function() {
         breakpoints: {
             768: {
                 spaceBetween: 34,
-                slidesPerView: 2,
             },
 
         }

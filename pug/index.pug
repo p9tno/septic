@@ -102,28 +102,83 @@ block content
                                     .table
                                         .table__head
                                             .table__row
-                                                .table__col По количеству человек
-                                                .table__col Плановое ТО
-                                                .table__col Полное ТО
+                                                .table__col 
+                                                    span По количеству человек
+                                                .table__col 
+                                                    span Плановое ТО
+                                                .table__col 
+                                                    span Полное ТО
                                         .table__body
-                                            .table__row 
-                                                .table__col 2-3 чел
-                                                .table__col 4500
-                                                .table__col 6000
-                                            .table__row 
-                                                .table__col Более 15
-                                                .table__col.col_2 По договорности
+                                            each item in [ {col1: '2-3 чел', col2: '4500', col3: '6000'}, {col1: '4-5 чел', col2: '5000', col3: '7000'}, {col1: '6-8 чел', col2: '6000', col3: '7500'}, {col1: '9-10 чел', col2: '8000', col3: '10.500'}, {col1: '11-15 чел', col2: '10.000', col3: '14.000'},]
+
+                                                .table__row 
+                                                    .table__col 
+                                                        span=item.col1
+                                                    .table__col 
+                                                        span=item.col2
+                                                    .table__col 
+                                                        span=item.col3
+                                            .table__row.col_full
+                                                .table__col 
+                                                    span Более 15
+                                                .table__col 
+                                                    span По договорности
                                                 .table__col
 
 
-                //- .swiper-arrows.cost__arrows.desktop
-                //-     i.icon_arrow_left
-                //-     i.icon_arrow_right
+                .swiper-arrows.cost__arrows.desktop
+                    i.icon_arrow_left
+                    i.icon_arrow_right
 
             .cost__desc В стоимость планового и полного обслуживания стоимость выезда уже включена и все профифилактические работы.
 
 
     // end cost
+
+    // begin warning
+    section#warning.warning.section
+        .container_center
+            .warning__content
+                i.icon_warning
+                span ВАЖНО: Ремонт септика оплачивается отдельно
+
+    // end warning
+
+    // begin price
+    section#price.price.section
+        .container_center
+            h3.section__title Стоимость ремонта септиков в Ивантеевке
+            .price__grid
+                each item in ['Замена полавкового переключателя без выезда', 'Замена мембран в копрессоре', 'Замена влагостойки розетки', 'Замена полавкового переключателя без выезда', 'Замена мембран в копрессоре', 'Замена влагостойки розетки','Замена полавкового переключателя без выезда', 'Замена мембран в копрессоре', 'Замена влагостойки розетки', 'Замена полавкового переключателя без выезда', 'Замена мембран в копрессоре', 'Замена влагостойки розетки', 'Замена влагостойки розетки', ]
+
+                    .price__item
+                        .tableSm
+                            .tableSm__head
+                                .tableSm__row
+                                    .tableSm__col 
+                                        span=item
+
+                            .tableSm__body
+                                .tableSm__row 
+                                    .tableSm__col 
+                                        span Работа
+                                    .tableSm__col 
+                                        span Материалы
+                                .tableSm__row 
+                                    .tableSm__col 
+                                        span 500 руб.
+                                    .tableSm__col 
+                                        span 1500 руб.
+
+
+            .price__more
+                a.btn.shov_more_js(href="#") 
+                    span Показать больше
+
+
+
+
+    // end price
 
 
     // begin projectBtn

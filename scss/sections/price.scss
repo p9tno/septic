@@ -1,0 +1,40 @@
+.price {
+    .section__title {
+        @media (min-width: 768px) {
+            width: 20em;
+        }
+    }
+
+    &__grid {
+        margin-top: 1.875em;
+        @media (min-width: 768px) {
+            margin-top: 3.125em;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 1.875em;
+        }
+
+    }
+
+    &__item {
+        margin-top: 1.5em;
+
+        &:first-child {
+            margin-top: 0;
+        }
+        @media (min-width: 768px) {
+            margin-top: 0;
+        }
+    }
+
+    &__more {
+        text-align: center;
+        margin-top: 1.875em;
+        @media (min-width: 768px) {
+            margin-top: 3.125em;
+        }
+
+        &.loading {}
+    }
+
+}
