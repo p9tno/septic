@@ -1,9 +1,11 @@
 .warning {
-    background-color: $color_info_light;
-    color: $color_white;
-    padding: 1em 0;
-    @media (min-width: 768px) {
-        padding: 3.5em 0;
+    &__wrap {
+        background-color: $color_info_light;
+        color: $color_white;
+        padding: 1em 0;
+        @media (min-width: 768px) {
+            padding: 3.5em 0;
+        }
 
     }
 

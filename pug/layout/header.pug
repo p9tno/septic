@@ -18,20 +18,26 @@ header.header
         nav.header__navbar
             ul.menu
                 li.menu__item
-                    a(href="#") Главная
+                    a.scroll_js(href="#firstscreen") Главная
                 li.menu__item.menu__item_has_children
                     a(href="#") Услуги
                     ul.menu__sub
                         each item in ['Обслуживание септиков', 'Ремонт септиков', 'Наращивание септиков', 'Пайка септиков', 'Откачака септиков', 'Модернизация септиков', 'Консервация септика', 'Отвод воды из септика', 'Ремонт компрессоров для септика', ]
                             li.menu__item
-                                a(href="#")=item
+                                a(href="https://yandex.by/" target="_blank")=item
 
-                each item in ['Модели', 'Ремонт и цена', 'Обслуживание стоин', 'Фото работ', ]
-                    li.menu__item
-                        a(href="#")=item
+
+                li.menu__item
+                    a.scroll_js(href="#service") Модели
+                li.menu__item
+                    a.scroll_js(href="#cost") Ремонт и цена
+                li.menu__item
+                    a.scroll_js(href="#price") Обслуживание стоин
+                li.menu__item
+                    a.scroll_js(href="#gallery") Фото работ
 
         .header__phone
-            a.btn.btn_lg(href="#")
+            a.btn.btn_lg(href="tel:+7(900)000-00-00")
                 i.icon_phone
                 span +7(900)000-00-00
 

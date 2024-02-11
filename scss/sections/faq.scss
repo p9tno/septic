@@ -2,7 +2,7 @@
     &__content {
         margin-top: 1.375em;
         @media (min-width: 768px) {
-            margin-top: 3.125em;
+            margin: 3.125em auto 0;
             display: flex;
             justify-content: space-between;
             gap: 1.875em;
@@ -10,6 +10,8 @@
             > * {
                 width: 50%;
             }
+
+            width: 66.875em;
         }
     }
 }
@@ -79,7 +81,7 @@
         display: none;
         padding-top: 1.5em;
         @media (min-width: 768px) {
-            width: 35em;
+            width: 29.375em;
         }
 
         span {

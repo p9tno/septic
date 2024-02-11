@@ -10,7 +10,7 @@ block content
             .firstscreen__content
                 h1.section__title.lg Обслуживание и ремонт септиков в Ивантеевка 
                 .firstscreen__btn
-                    a.btn.btn_success(href="#")
+                    a.btn.btn_success(href="tel:+7(900)000-00-00")
                         i.icon_phone
                         span Позвонить
                     a.btn.show_modal_js(href="#feedback") 
@@ -32,7 +32,7 @@ block content
     // begin service
     section#service.service.section
         .container_center
-            h2.section__title Обслуживание и ремонт септиков различных моделий   
+            h2.section__title(data-aos="fade-up") Обслуживание и ремонт септиков различных моделий   
             .service__slider
                 .swiper.service_swiper_js
                     .swiper-wrapper
@@ -60,7 +60,7 @@ block content
     // begin advantages
     section#advantages.advantages.section
         .container_center
-            h2.section__title Наши преимушества
+            h2.section__title(data-aos="fade-up") Наши преимушества
             .advantages__grid
                 each item in [{img: '1', title: 'Мастера укомплектованы всем необходимым'}, {img: '2', title: 'Запчасти и расходники в наличии у мастера '}, {img: '3', title: 'Срочный выезд-выезжаем в течении 15 минут'}]
                     .advantages__item
@@ -74,15 +74,15 @@ block content
         .container_center
             .callback__wrap
                 .callback__img(style="background-image: url('../img/callback.webp')")
-                    .callback__question.img
+                    .callback__question.img(data-aos="zoom-in")
                         img(src="../img/question.webp" alt="image" loading="lazy")
                 .callback__content
                     .callback__title Не знаете марку септика? Позвоните и мы подскажем. Или отправьте фото в Ватсап.
                     .callback__btn
-                        a.btn.btn_lg(href="#")
+                        a.btn.btn_lg.show_modal_js(href="#feedback")
                             span Консультация Мастера
 
-                        a.btn.btn_lg.btn_success(href="#")
+                        a.btn.btn_lg.btn_success(href="https://wa.me/+375293085057" target="_blank")
                             i.icon_whatsapp
                             span Написать В Whatsapp
 
@@ -91,7 +91,7 @@ block content
     // begin cost
     section#cost.cost.section
         .container_center
-            h2.section__title Стоимость Обслуживания септиков в Ивантеевке
+            h2.section__title(data-aos="fade-up") Стоимость Обслуживания септиков в Ивантеевке
             .cost__slider
                 .swiper.cost_swiper_js
                     .swiper-wrapper
@@ -137,11 +137,11 @@ block content
 
     // begin warning
     section#warning.warning.section
-        .container_center
-            .warning__content
-                i.icon_warning
-                span ВАЖНО: Ремонт септика оплачивается отдельно
-
+        .warning__wrap
+            .container_center
+                .warning__content
+                    i.icon_warning(data-aos="zoom-in")
+                    span ВАЖНО: Ремонт септика оплачивается отдельно
     // end warning
 
     // begin departure
@@ -153,7 +153,7 @@ block content
 
                     .departure__img.img
                         img(src="../img/departure.webp" alt="image" loading="lazy")
-                        .departure__label
+                        .departure__label(data-aos="fade-left")
                             span выезжаем в течение 15 минут
                 .departure__content
                     ul.departure__list
@@ -176,7 +176,7 @@ block content
     // begin price
     section#price.price.section
         .container_center
-            h2.section__title Стоимость ремонта септиков в Ивантеевке
+            h2.section__title(data-aos="fade-up") Стоимость ремонта септиков в Ивантеевке
             .price__grid
                 each item in ['Замена полавкового переключателя без выезда', 'Замена мембран в копрессоре', 'Замена влагостойки розетки', 'Замена полавкового переключателя без выезда', 'Замена мембран в копрессоре', 'Замена влагостойки розетки','Замена полавкового переключателя без выезда', 'Замена мембран в копрессоре', 'Замена влагостойки розетки', 'Замена полавкового переключателя без выезда', 'Замена мембран в копрессоре', 'Замена влагостойки розетки', 'Замена влагостойки розетки', ]
 
@@ -209,7 +209,7 @@ block content
     // begin gallery
     section#gallery.gallery.section
         .container_center
-            h2.section__title Галерея работ 
+            h2.section__title(data-aos="fade-up") Галерея работ 
             .gallery__list
                 each item in ['', '', ]
                     .gallery__item
@@ -234,7 +234,7 @@ block content
     section#recall.recall.section
         .recall__wrap
             .container_center
-                h2.section__title Отзывы
+                h2.section__title(data-aos="fade-up") Отзывы
                 .recall__slider
                     .swiper.recall_swiper_js
                         .swiper-wrapper
@@ -252,26 +252,36 @@ block content
     // begin faq
     section#faq.faq.section
         .container_center
-            h2.section__title Вопросы-Ответы
+            h2.section__title(data-aos="fade-up") Вопросы-Ответы
             .faq__content
                 each item in ['', '', ]
 
                     .faq__col
                         each item in ['', '', '', ]
-                            .collapse(data-collapse-wrapper="")
-                                .collapse__title(data-collapse="") 
+                            .collapse
+                                .collapse__title
                                     span Мы не живём на даче зимой. Нужно ли включать станцию пока нас нет.
-                                .collapse__body(data-collapse-body="")
+                                .collapse__body
                                     span Если дом закрывается на всю зиму, то нужно отключить электроэнергию, очистить ил, залить все камеры водой на один метр от дна. А при новом запуске станции подключить...   
 
-                        .collapse(data-collapse-wrapper="")
-                            .collapse__title(data-collapse="") 
+                        .collapse
+                            .collapse__title
                                 span Как определить?
-                            .collapse__body(data-collapse-body="")
+                            .collapse__body
                                 span Если дом закрывается на всю зиму, то нужно отключить электроэнергию, очистить ил, залить все камеры водой на один метр от дна. А при новом запуске станции подключить...    Если дом закрывается на всю зиму, то нужно отключить электроэнергию, очистить ил, залить все камеры водой на один метр от дна. А при новом запуске станции подключить...                     
 
 
     // end faq
+
+    // begin map
+    // https://yandex.ru/map-constructor/
+    section#map.map.section
+        .container_center
+            h2.section__title(data-aos="fade-up") Мы работаем в пушкинском городском округе
+            .map__content
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0be7c32a6d9e68f7ba69d5b2e7dfcda1e7a15a262e57ffcb28e4d02d36ab69ef&amp;source=constructor" width="820" height="720" frameborder="0"></iframe>
+
+    // end map
 
     // begin contacts
     section#contacts.contacts.section
@@ -281,7 +291,7 @@ block content
                 .contacts__list
                     .contacts__item
                         b Адрес
-                        span Город Дмитров, Пушкинский  городской округ.
+                        span Город Дмитров, Пушкинский<br> городской округ.
 
                     .contacts__item
                         b График работы

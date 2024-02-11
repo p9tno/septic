@@ -31,12 +31,8 @@ function isTouch() {
     return app.touchDevice();
 } // for touch device
 
-// console.log('pathname: ', window.location.pathname);
-// console.log('url: ', window.location.href);
-// console.log('origin: ', window.location.origin);
 
 window.onload = function () {
-    console.log('onload');
     function preloader() {
         $(()=>{
 
@@ -58,47 +54,23 @@ $(document).ready(function() {
 
     let mediaQuerySize = 768;
     let windowWidth = screen.width;
-    // console.log(windowWidth);
     if (windowWidth >= mediaQuerySize) {
-        console.log('desktop');
+        // console.log('desktop');
         showMore('.price__item', '.shov_more_js', start=6, show=6);
-
-
     } else {
-        console.log('mobile');
+        // console.log('mobile');
         toggleMobileSubMenu();
         showMore('.price__item', '.shov_more_js', start=3, show=3);
-    }
-
-    // console.log('ready');
-    window.addEventListener('resize', () => {
-        // Запрещаем выполнение скриптов при смене только высоты вьюпорта (фикс для скролла в IOS и Android >=v.5)
-        if (app.resized == screen.width) { return; }
-        app.resized = screen.width;
-        // console.log('resize');
-        // console.log(screen.width);
-        checkOnResize();
-    });
-
-    function checkOnResize() {
-        if (isLgWidth()) {
-            console.log('isLgWidth');
-        } else {
-            console.log('isLgWidth else');
-        }
-
     }
 
     function showModal() {
         $('.show_modal_js').on('click', function (e) {
             e.preventDefault();
             let id  = $(this).attr('href');
-
             $(id).modal('show');
         });
 
         $('.modal').on('show.bs.modal', () => {
-            // let openedModal = $('.modal.in:not(.popapCalc)');
             let openedModal = $('.modal');
             if (openedModal.length > 0) {
                 openedModal.modal('hide');
@@ -110,7 +82,6 @@ $(document).ready(function() {
 
     function openMobileNav() {
         $('.header__toggle').click(function(event) {
-            console.log('Показ меню');
             $('.header__navbar').toggleClass('header__navbar_open');
             $('.header__toggle').toggleClass('header__toggle_open');
             $( 'body' ).toggleClass( 'nav-open' );
@@ -161,41 +132,36 @@ $(document).ready(function() {
         });
     }
 
+    function collapsedActiveOne() {
+        $('.collapse__title').on('click', function() {
+            let body = $(this).parent().find('.collapse__body');
+            $('.collapse__body').not(body).slideUp();
+            $(body).slideToggle();
 
-    function collapsed() {
-        let toggle = $('[data-collapse]');
-
-        toggle.on('click', function() {
-            let id = $(this).data('collapse'),
-            body = $('[data-collapse-body="'+id+'"]'),
-            wrap = body.closest('[data-collapse-wrapper]');
-
-            if (!id) {
-                // $('[data-collapse-wrapper]').removeClass('open');
-                body = $(this).parent().find('[data-collapse-body]');
-                $(this).toggleClass('open');
-                if ($(this).hasClass('open')) {
-                    body.slideDown();
-                } else {
-                    body.slideUp();
-                }
-            } else if (id === 'all') {
-                body.slideDown();
-                toggle.addClass('open');
-            } else {
-                body.slideToggle();
-                $(this).toggleClass('open');
-            }
-        });
+            let toggle = $(this).parent().find('.collapse__title');
+            $('.collapse__title').not(toggle).removeClass('open');
+            $(toggle).toggleClass('open');
+        })
     }
-    collapsed();
+    collapsedActiveOne();
 
+    function scroolTo() {
+        $(".scroll_js").on("click", function (event) {
+            event.preventDefault();
 
+            $('.header__navbar').removeClass('header__navbar_open');
+            $('.header__toggle').removeClass('header__toggle_open');
+            $( 'body' ).removeClass( 'nav-open' );
 
-    // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
+            let id  = $(this).attr('href');
+            let top = $(id).offset().top-70;
+            $('body,html').animate({scrollTop: top}, 1500);
+        });
+    };
+    scroolTo();
+
     function stikyMenu() {
         let HeaderTop = $( 'header' ).offset().top;
-        // let HeaderTop = $( 'header' ).offset().top + $( '.home' ).innerHeight();
         let currentTop = $( window ).scrollTop();
 
         setNavbarPosition();
@@ -212,20 +178,6 @@ $(document).ready(function() {
             } else {
                 $( 'header' ).removeClass( 'stiky' );
             }
-
-            // $( '.navbar__link' ).each( function () {
-            //     let section = $( this ).attr( 'href' );
-            //
-            //     if ( $( 'section' ).is( section ) ) {
-            //         let offset = $( section ).offset().top;
-            //
-            //         if ( offset <= currentTop && offset + $( section ).innerHeight() > currentTop ) {
-            //             $( this ).addClass( 'active' );
-            //         } else {
-            //             $( this ).removeClass( 'active' );
-            //         }
-            //     }
-            // } );
         }
 
     }
@@ -249,4 +201,114 @@ $(document).ready(function() {
         });
     }
     initAOS ();
+
+    const service = new Swiper('.service_swiper_js', {
+        slidesPerView: 2,
+        spaceBetween: 8,
+        speed: 500,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+        },
+
+        navigation: {
+            nextEl: '.service__arrows .icon_arrow_right',
+            prevEl: '.service__arrows .icon_arrow_left',
+        },
+
+        scrollbar: {
+          el: ".swiper-scrollbar",
+          // hide: true,
+        },
+
+        breakpoints: {
+            768: {
+                loop: false,
+                spaceBetween: 30,
+                slidesPerView: 3,
+            },
+
+        }
+    });
+
+    const cost = new Swiper('.cost_swiper_js', {
+        slidesPerView: 2,
+        spaceBetween: 8,
+        speed: 500,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+        },
+
+        navigation: {
+            nextEl: '.cost__arrows .icon_arrow_right',
+            prevEl: '.cost__arrows .icon_arrow_left',
+        },
+
+        breakpoints: {
+            768: {
+                spaceBetween: 34,
+            },
+
+        }
+    });
+
+    function addSliders() {
+        let gallerys = $('.gallery_swiper_js');
+        gallerys.each(function() {
+            let options = $(this).data('options') || {};
+            let $parent = $(this).parent();
+            let swiperDefaults = {
+
+                slidesPerView: 2,
+                spaceBetween: 12,
+                speed: 500,
+                loop: true,
+                autoplay: {
+                  delay: 5000,
+                },
+
+                breakpoints: {
+                    768: {
+                        spaceBetween: 30,
+                    },
+
+                },
+
+                navigation: {
+                    nextEl: $parent.find('.gallery__arrows .icon_arrow_right')[0],
+                    prevEl: $parent.find('.gallery__arrows .icon_arrow_left')[0],
+                },
+
+            };
+
+            let swiperOptions = $.extend(swiperDefaults, options),
+            mySwiper = new Swiper(this, swiperOptions);
+
+        });
+    }
+    addSliders();
+
+    const recall = new Swiper('.recall_swiper_js', {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        speed: 500,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+        },
+
+        navigation: {
+            nextEl: '.recall__arrows .icon_arrow_right',
+            prevEl: '.recall__arrows .icon_arrow_left',
+        },
+
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+
+        }
+    });
 })
